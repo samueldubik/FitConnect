@@ -1,0 +1,20 @@
+{
+  "folders": [
+    {
+      "name": "Mobile",
+      "path": "Mobile",
+    },
+    {
+      "name": "Services",
+      "path": "Services",
+    },
+    {
+      "name": "FitConnectIQ",
+      "path": "FitConnectIQ",
+    },
+  ],
+  "settings": {
+    "monkeyC.jungleFiles": "monkey.jungle",
+    "git.openRepositoryInParentFolders": "always",
+  },
+}

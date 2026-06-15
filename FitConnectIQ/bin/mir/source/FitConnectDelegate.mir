@@ -1,0 +1,43 @@
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [WatchUi,1,14,21]; ]
+import Toybox.WatchUi;
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc"; @line = 4; @symbol_classdef = [FitConnectDelegate,4,6,24]; @symbol_extends<0> = [WatchUi,4,33,40]; @symbol_extends<1> = [BehaviorDelegate,4,41,57]; ]
+class FitConnectDelegate extends WatchUi.BehaviorDelegate {
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc"; @line = 4; ]
+    <init> {
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc"; @line = 4; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc"; @line = 6; @symbol_functiondef = [initialize,6,13,23]; ]
+    function initialize() as Void {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectDelegate_mc_6_26_8_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc" 7 8 ]
+        symbol [ BehaviorDelegate %tmp.2 7 8 24 ];
+        %tmp.2 = getv ? :BehaviorDelegate;
+        symbol [ initialize %tmp.3 7 25 35 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectDelegate_mc_6_26_8_4_stop:
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc"; @line = 10; @symbol_functiondef = [onSelect,10,13,21]; ]
+    function onSelect() {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectDelegate_mc_10_24_13_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc" 11 8 ]
+        symbol [ System %tmp.1 11 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 11 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "SEND DATA pressed";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc" 12 8 ]
+        %tmp.4 = true;
+        ret %tmp.4;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectDelegate_mc_10_24_13_4_stop:
+    }
+}
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectDelegate.mc"; @line = 1; ]
+<init> {
+}
