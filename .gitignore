@@ -1,0 +1,38 @@
+# ─── Dependencies ────────────────────────────────────────────────
+node_modules/
+
+# ─── Expo / React Native (Mobile/) ───────────────────────────────
+Mobile/.expo/
+Mobile/dist/
+Mobile/web-build/
+Mobile/expo-env.d.ts
+Mobile/ios/
+Mobile/android/
+Mobile/.kotlin/
+Mobile/.metro-health-check*
+
+# ─── Native signing artifacts ────────────────────────────────────
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# ─── TypeScript ──────────────────────────────────────────────────
+*.tsbuildinfo
+
+# ─── Logs ────────────────────────────────────────────────────────
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# ─── Environment / secrets ───────────────────────────────────────
+.env
+.env.local
+.env*.local
+
+# ─── OS ──────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.pem
