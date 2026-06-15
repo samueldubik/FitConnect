@@ -17,15 +17,10 @@ class FitConnectIQApp extends Application.AppBase {
     }
 
     // Return the initial view of your application here
-    function getInitialView() {
-        return [ new FitConnectIQView(), new FitConnectDelegate() ];
-    }
-
-    // New app settings have been received so trigger a UI update
-    function onSettingsChanged() as Void {
-        WatchUi.requestUpdate();
-    }
-
+function getInitialView() {
+    var view = new FitConnectIQView();
+    return [ view, new FitConnectIQDelegate(view) ];
+}
 }
 
 function getApp() as FitConnectIQApp {
