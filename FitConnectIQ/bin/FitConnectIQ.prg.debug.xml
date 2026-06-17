@@ -8,171 +8,355 @@
         <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="3" lineNum="4" parent="globals/FitConnectIQDelegate" pc="268435493" symbol="&lt;init&gt;"/>
         <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="5" lineNum="5" parent="globals/FitConnectIQMenuDelegate" pc="268435525" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="6" lineNum="7" parent="globals/FitConnectIQView" pc="268435537" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="7" lineNum="12" parent="globals/FitConnectIQApp" pc="268435549" symbol="onStart"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="8" lineNum="20" parent="globals/FitConnectIQApp" pc="268435552" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="8" lineNum="21" parent="globals/FitConnectIQApp" pc="268435555" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="8" lineNum="22" parent="globals/FitConnectIQApp" pc="268435575" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="9" lineNum="7" parent="globals/FitConnectIQApp" pc="268435608" symbol="initialize"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="9" lineNum="8" parent="globals/FitConnectIQApp" pc="268435610" symbol="initialize"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="10" lineNum="16" parent="globals/FitConnectIQApp" pc="268435623" symbol="onStop"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="11" lineNum="23" parent="globals/FitConnectIQDelegate" pc="268435626" symbol="onBack"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="11" lineNum="24" parent="globals/FitConnectIQDelegate" pc="268435628" symbol="onBack"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="12" lineNum="8" parent="globals/FitConnectIQDelegate" pc="268435630" symbol="initialize"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="12" lineNum="9" parent="globals/FitConnectIQDelegate" pc="268435632" symbol="initialize"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="12" lineNum="10" parent="globals/FitConnectIQDelegate" pc="268435644" symbol="initialize"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="13" lineNum="13" parent="globals/FitConnectIQDelegate" pc="268435654" symbol="onSelect"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="13" lineNum="14" parent="globals/FitConnectIQDelegate" pc="268435656" symbol="onSelect"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="13" lineNum="16" parent="globals/FitConnectIQDelegate" pc="268435674" symbol="onSelect"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="13" lineNum="17" parent="globals/FitConnectIQDelegate" pc="268435683" symbol="onSelect"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="13" lineNum="20" parent="globals/FitConnectIQDelegate" pc="268435698" symbol="onSelect"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="14" lineNum="11" parent="globals/FitConnectIQMenuDelegate" pc="268435700" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="14" lineNum="12" parent="globals/FitConnectIQMenuDelegate" pc="268435702" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="14" lineNum="13" parent="globals/FitConnectIQMenuDelegate" pc="268435713" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="14" lineNum="14" parent="globals/FitConnectIQMenuDelegate" pc="268435734" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="14" lineNum="15" parent="globals/FitConnectIQMenuDelegate" pc="268435745" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="15" lineNum="7" parent="globals/FitConnectIQMenuDelegate" pc="268435767" symbol="initialize"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="15" lineNum="8" parent="globals/FitConnectIQMenuDelegate" pc="268435769" symbol="initialize"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="16" lineNum="15" parent="globals/FitConnectIQView" pc="268435782" symbol="initialize"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="16" lineNum="16" parent="globals/FitConnectIQView" pc="268435784" symbol="initialize"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="20" parent="globals/FitConnectIQView" pc="268435797" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="26" parent="globals/FitConnectIQView" pc="268435800" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="27" parent="globals/FitConnectIQView" pc="268435812" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="28" parent="globals/FitConnectIQView" pc="268435824" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="29" parent="globals/FitConnectIQView" pc="268435836" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="30" parent="globals/FitConnectIQView" pc="268435848" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="36" parent="globals/FitConnectIQView" pc="268435860" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="37" parent="globals/FitConnectIQView" pc="268435872" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="38" parent="globals/FitConnectIQView" pc="268435888" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="44" parent="globals/FitConnectIQView" pc="268435900" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="50" parent="globals/FitConnectIQView" pc="268435912" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="51" parent="globals/FitConnectIQView" pc="268435928" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="52" parent="globals/FitConnectIQView" pc="268435944" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="53" parent="globals/FitConnectIQView" pc="268435960" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="54" parent="globals/FitConnectIQView" pc="268435976" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="55" parent="globals/FitConnectIQView" pc="268435992" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="56" parent="globals/FitConnectIQView" pc="268436008" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="62" parent="globals/FitConnectIQView" pc="268436024" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="68" parent="globals/FitConnectIQView" pc="268436036" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="74" parent="globals/FitConnectIQView" pc="268436048" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="75" parent="globals/FitConnectIQView" pc="268436060" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="76" parent="globals/FitConnectIQView" pc="268436072" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="17" lineNum="79" parent="globals/FitConnectIQView" pc="268436084" symbol="collectData"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="82" parent="globals/FitConnectIQView" pc="268436103" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="83" parent="globals/FitConnectIQView" pc="268436106" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="84" parent="globals/FitConnectIQView" pc="268436118" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="86" parent="globals/FitConnectIQView" pc="268436126" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="87" parent="globals/FitConnectIQView" pc="268436135" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="89" parent="globals/FitConnectIQView" pc="268436142" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="91" parent="globals/FitConnectIQView" pc="268436159" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="93" parent="globals/FitConnectIQView" pc="268436182" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="94" parent="globals/FitConnectIQView" pc="268436211" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="95" parent="globals/FitConnectIQView" pc="268436240" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="18" lineNum="97" parent="globals/FitConnectIQView" pc="268436270" symbol="onUpdate"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="19" lineNum="14" parent="globals/Rez/Layouts" pc="268436294" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="19" lineNum="15" parent="globals/Rez/Layouts" pc="268436305" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="19" lineNum="17" parent="globals/Rez/Layouts" pc="268436314" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="19" lineNum="19" parent="globals/Rez/Layouts" pc="268436417" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="19" lineNum="20" parent="globals/Rez/Layouts" pc="268436501" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="19" lineNum="22" parent="globals/Rez/Layouts" pc="268436532" symbol="MainLayout"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="20" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268436547" symbol="&lt;init&gt;"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="21" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268436559" symbol="initialize"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="21" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268436561" symbol="initialize"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="21" lineNum="30" parent="globals/Rez/Menus/MainMenu" pc="268436573" symbol="initialize"/>
-        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="21" lineNum="31" parent="globals/Rez/Menus/MainMenu" pc="268436618" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="6" lineNum="10" parent="globals/FitConnectIQView" pc="268435537" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectTransmitCallback.mc" id="7" lineNum="2" parent="globals/FitConnectTransmitCallback" pc="268435549" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="8" lineNum="12" parent="globals/FitConnectIQApp" pc="268435561" symbol="onStart"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="9" lineNum="20" parent="globals/FitConnectIQApp" pc="268435564" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="9" lineNum="21" parent="globals/FitConnectIQApp" pc="268435567" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="9" lineNum="22" parent="globals/FitConnectIQApp" pc="268435587" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="10" lineNum="7" parent="globals/FitConnectIQApp" pc="268435620" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="10" lineNum="8" parent="globals/FitConnectIQApp" pc="268435622" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQApp.mc" id="11" lineNum="16" parent="globals/FitConnectIQApp" pc="268435635" symbol="onStop"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="12" lineNum="8" parent="globals/FitConnectDataFormatter" pc="268435638" symbol="formatData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="12" lineNum="9" parent="globals/FitConnectDataFormatter" pc="268435640" symbol="formatData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="13" lineNum="43" parent="globals/FitConnectDataFormatter" pc="268436028" symbol="formatSystem"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="13" lineNum="44" parent="globals/FitConnectDataFormatter" pc="268436030" symbol="formatSystem"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="140" parent="globals/FitConnectDataFormatter" pc="268436263" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="141" parent="globals/FitConnectDataFormatter" pc="268436266" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="143" parent="globals/FitConnectDataFormatter" pc="268436270" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="144" parent="globals/FitConnectDataFormatter" pc="268436276" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="147" parent="globals/FitConnectDataFormatter" pc="268436282" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="148" parent="globals/FitConnectDataFormatter" pc="268436293" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="150" parent="globals/FitConnectDataFormatter" pc="268436302" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="151" parent="globals/FitConnectDataFormatter" pc="268436308" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="154" parent="globals/FitConnectDataFormatter" pc="268436314" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="14" lineNum="157" parent="globals/FitConnectDataFormatter" pc="268436344" symbol="formatSensorHistoryIterator"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="15" lineNum="186" parent="globals/FitConnectDataFormatter" pc="268436347" symbol="formatPosition"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="15" lineNum="187" parent="globals/FitConnectDataFormatter" pc="268436350" symbol="formatPosition"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="15" lineNum="188" parent="globals/FitConnectDataFormatter" pc="268436356" symbol="formatPosition"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="15" lineNum="191" parent="globals/FitConnectDataFormatter" pc="268436361" symbol="formatPosition"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="15" lineNum="193" parent="globals/FitConnectDataFormatter" pc="268436370" symbol="formatPosition"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="16" lineNum="124" parent="globals/FitConnectDataFormatter" pc="268436397" symbol="formatSensorInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="16" lineNum="125" parent="globals/FitConnectDataFormatter" pc="268436399" symbol="formatSensorInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="16" lineNum="126" parent="globals/FitConnectDataFormatter" pc="268436405" symbol="formatSensorInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="16" lineNum="129" parent="globals/FitConnectDataFormatter" pc="268436410" symbol="formatSensorInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="17" lineNum="112" parent="globals/FitConnectDataFormatter" pc="268436500" symbol="formatActiveMinutes"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="17" lineNum="113" parent="globals/FitConnectDataFormatter" pc="268436502" symbol="formatActiveMinutes"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="17" lineNum="114" parent="globals/FitConnectDataFormatter" pc="268436508" symbol="formatActiveMinutes"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="17" lineNum="117" parent="globals/FitConnectDataFormatter" pc="268436513" symbol="formatActiveMinutes"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="18" lineNum="171" parent="globals/FitConnectDataFormatter" pc="268436555" symbol="formatPositionInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="18" lineNum="172" parent="globals/FitConnectDataFormatter" pc="268436557" symbol="formatPositionInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="18" lineNum="173" parent="globals/FitConnectDataFormatter" pc="268436563" symbol="formatPositionInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="18" lineNum="176" parent="globals/FitConnectDataFormatter" pc="268436568" symbol="formatPositionInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="19" lineNum="160" parent="globals/FitConnectDataFormatter" pc="268436662" symbol="formatSensorHistorySample"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="19" lineNum="161" parent="globals/FitConnectDataFormatter" pc="268436664" symbol="formatSensorHistorySample"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="19" lineNum="162" parent="globals/FitConnectDataFormatter" pc="268436670" symbol="formatSensorHistorySample"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="19" lineNum="165" parent="globals/FitConnectDataFormatter" pc="268436675" symbol="formatSensorHistorySample"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="20" lineNum="215" parent="globals/FitConnectDataFormatter" pc="268436713" symbol="formatMoment"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="20" lineNum="216" parent="globals/FitConnectDataFormatter" pc="268436715" symbol="formatMoment"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="20" lineNum="217" parent="globals/FitConnectDataFormatter" pc="268436721" symbol="formatMoment"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="20" lineNum="220" parent="globals/FitConnectDataFormatter" pc="268436726" symbol="formatMoment"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="21" lineNum="86" parent="globals/FitConnectDataFormatter" pc="268436734" symbol="formatActivityHistory"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="21" lineNum="87" parent="globals/FitConnectDataFormatter" pc="268436737" symbol="formatActivityHistory"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="21" lineNum="89" parent="globals/FitConnectDataFormatter" pc="268436741" symbol="formatActivityHistory"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="21" lineNum="90" parent="globals/FitConnectDataFormatter" pc="268436747" symbol="formatActivityHistory"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="21" lineNum="93" parent="globals/FitConnectDataFormatter" pc="268436753" symbol="formatActivityHistory"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="21" lineNum="94" parent="globals/FitConnectDataFormatter" pc="268436769" symbol="formatActivityHistory"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="21" lineNum="96" parent="globals/FitConnectDataFormatter" pc="268436776" symbol="formatActivityHistory"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="21" lineNum="109" parent="globals/FitConnectDataFormatter" pc="268436925" symbol="formatActivityHistory"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="22" lineNum="199" parent="globals/FitConnectDataFormatter" pc="268436928" symbol="formatUserProfile"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="22" lineNum="200" parent="globals/FitConnectDataFormatter" pc="268436930" symbol="formatUserProfile"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="22" lineNum="201" parent="globals/FitConnectDataFormatter" pc="268436936" symbol="formatUserProfile"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="22" lineNum="204" parent="globals/FitConnectDataFormatter" pc="268436941" symbol="formatUserProfile"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="23" lineNum="70" parent="globals/FitConnectDataFormatter" pc="268437031" symbol="formatActivityInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="23" lineNum="71" parent="globals/FitConnectDataFormatter" pc="268437033" symbol="formatActivityInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="23" lineNum="72" parent="globals/FitConnectDataFormatter" pc="268437039" symbol="formatActivityInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectDataCollector.mc" id="23" lineNum="75" parent="globals/FitConnectDataFormatter" pc="268437044" symbol="formatActivityInfo"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="25" lineNum="23" parent="globals/FitConnectIQDelegate" pc="268437134" symbol="onBack"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="25" lineNum="24" parent="globals/FitConnectIQDelegate" pc="268437136" symbol="onBack"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="26" lineNum="8" parent="globals/FitConnectIQDelegate" pc="268437138" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="26" lineNum="9" parent="globals/FitConnectIQDelegate" pc="268437140" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="26" lineNum="10" parent="globals/FitConnectIQDelegate" pc="268437152" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="27" lineNum="13" parent="globals/FitConnectIQDelegate" pc="268437162" symbol="onSelect"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="27" lineNum="14" parent="globals/FitConnectIQDelegate" pc="268437164" symbol="onSelect"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="27" lineNum="16" parent="globals/FitConnectIQDelegate" pc="268437182" symbol="onSelect"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="27" lineNum="17" parent="globals/FitConnectIQDelegate" pc="268437191" symbol="onSelect"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQDelegate.mc" id="27" lineNum="20" parent="globals/FitConnectIQDelegate" pc="268437206" symbol="onSelect"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="28" lineNum="11" parent="globals/FitConnectIQMenuDelegate" pc="268437208" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="28" lineNum="12" parent="globals/FitConnectIQMenuDelegate" pc="268437210" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="28" lineNum="13" parent="globals/FitConnectIQMenuDelegate" pc="268437221" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="28" lineNum="14" parent="globals/FitConnectIQMenuDelegate" pc="268437242" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="28" lineNum="15" parent="globals/FitConnectIQMenuDelegate" pc="268437253" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="29" lineNum="7" parent="globals/FitConnectIQMenuDelegate" pc="268437275" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQMenuDelegate.mc" id="29" lineNum="8" parent="globals/FitConnectIQMenuDelegate" pc="268437277" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="30" lineNum="20" parent="globals/FitConnectIQView" pc="268437290" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="30" lineNum="21" parent="globals/FitConnectIQView" pc="268437292" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="30" lineNum="22" parent="globals/FitConnectIQView" pc="268437304" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="26" parent="globals/FitConnectIQView" pc="268437330" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="32" parent="globals/FitConnectIQView" pc="268437333" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="33" parent="globals/FitConnectIQView" pc="268437345" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="34" parent="globals/FitConnectIQView" pc="268437357" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="35" parent="globals/FitConnectIQView" pc="268437369" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="36" parent="globals/FitConnectIQView" pc="268437381" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="42" parent="globals/FitConnectIQView" pc="268437393" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="43" parent="globals/FitConnectIQView" pc="268437405" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="44" parent="globals/FitConnectIQView" pc="268437421" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="50" parent="globals/FitConnectIQView" pc="268437433" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="56" parent="globals/FitConnectIQView" pc="268437445" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="57" parent="globals/FitConnectIQView" pc="268437461" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="58" parent="globals/FitConnectIQView" pc="268437477" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="59" parent="globals/FitConnectIQView" pc="268437493" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="60" parent="globals/FitConnectIQView" pc="268437509" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="61" parent="globals/FitConnectIQView" pc="268437525" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="62" parent="globals/FitConnectIQView" pc="268437541" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="68" parent="globals/FitConnectIQView" pc="268437557" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="74" parent="globals/FitConnectIQView" pc="268437569" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="80" parent="globals/FitConnectIQView" pc="268437581" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="81" parent="globals/FitConnectIQView" pc="268437593" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="82" parent="globals/FitConnectIQView" pc="268437605" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="85" parent="globals/FitConnectIQView" pc="268437617" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="116" parent="globals/FitConnectIQView" pc="268437805" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="31" lineNum="118" parent="globals/FitConnectIQView" pc="268437823" symbol="collectData"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="126" parent="globals/FitConnectIQView" pc="268437827" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="127" parent="globals/FitConnectIQView" pc="268437830" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="128" parent="globals/FitConnectIQView" pc="268437842" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="130" parent="globals/FitConnectIQView" pc="268437850" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="131" parent="globals/FitConnectIQView" pc="268437859" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="133" parent="globals/FitConnectIQView" pc="268437866" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="135" parent="globals/FitConnectIQView" pc="268437883" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="137" parent="globals/FitConnectIQView" pc="268437906" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="138" parent="globals/FitConnectIQView" pc="268437935" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="139" parent="globals/FitConnectIQView" pc="268437964" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectIQView.mc" id="32" lineNum="141" parent="globals/FitConnectIQView" pc="268437994" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectTransmitCallback.mc" id="33" lineNum="12" parent="globals/FitConnectTransmitCallback" pc="268438018" symbol="onError"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectTransmitCallback.mc" id="33" lineNum="13" parent="globals/FitConnectTransmitCallback" pc="268438020" symbol="onError"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectTransmitCallback.mc" id="34" lineNum="8" parent="globals/FitConnectTransmitCallback" pc="268438039" symbol="onComplete"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectTransmitCallback.mc" id="34" lineNum="9" parent="globals/FitConnectTransmitCallback" pc="268438041" symbol="onComplete"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectTransmitCallback.mc" id="35" lineNum="4" parent="globals/FitConnectTransmitCallback" pc="268438060" symbol="initialize"/>
+        <entry filename="C:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\source\\FitConnectTransmitCallback.mc" id="35" lineNum="5" parent="globals/FitConnectTransmitCallback" pc="268438062" symbol="initialize"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="36" lineNum="14" parent="globals/Rez/Layouts" pc="268438075" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="36" lineNum="15" parent="globals/Rez/Layouts" pc="268438086" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="36" lineNum="17" parent="globals/Rez/Layouts" pc="268438095" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="36" lineNum="19" parent="globals/Rez/Layouts" pc="268438198" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="36" lineNum="20" parent="globals/Rez/Layouts" pc="268438282" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="36" lineNum="22" parent="globals/Rez/Layouts" pc="268438313" symbol="MainLayout"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="37" lineNum="27" parent="globals/Rez/Menus/MainMenu" pc="268438328" symbol="&lt;init&gt;"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="38" lineNum="28" parent="globals/Rez/Menus/MainMenu" pc="268438340" symbol="initialize"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="38" lineNum="29" parent="globals/Rez/Menus/MainMenu" pc="268438342" symbol="initialize"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="38" lineNum="30" parent="globals/Rez/Menus/MainMenu" pc="268438354" symbol="initialize"/>
+        <entry filename="c:\\Users\\samue\\Documents\\Work\\FitConnect\\FitConnectIQ\\bin\\gen\\006-B4536-00\\source\\Rez.mcgen" id="38" lineNum="31" parent="globals/Rez/Menus/MainMenu" pc="268438399" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="8389877" symbol="activeMinutes"/>
+        <entry id="54" symbol="sensorInfo"/>
         <entry field="true" id="8389346" symbol="text"/>
-        <entry field="true" id="16" symbol="mHeartRate"/>
-        <entry id="9" object="true" symbol="FitConnectIQMenuDelegate"/>
+        <entry field="true" id="31" symbol="mHeartRate"/>
+        <entry id="10" object="true" symbol="FitConnectIQMenuDelegate"/>
+        <entry id="73" symbol="weatherHourlyForecast"/>
+        <entry id="8388936" method="true" symbol="info"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry id="5" module="true" symbol="globals/Rez/Menus"/>
-        <entry id="21" method="true" symbol="MainLayout"/>
-        <entry id="7" object="true" symbol="FitConnectIQApp"/>
-        <entry field="true" id="18" symbol="mSteps"/>
+        <entry field="true" id="8389149" symbol="restingHeartRate"/>
+        <entry field="true" id="8389543" symbol="phoneConnected"/>
+        <entry field="true" id="8389671" symbol="screenWidth"/>
+        <entry id="16" method="true" symbol="formatData"/>
+        <entry field="true" id="8389144" symbol="gender"/>
+        <entry id="36" method="true" symbol="MainLayout"/>
+        <entry field="true" id="8389312" symbol="when"/>
+        <entry id="42" symbol="timer"/>
+        <entry field="true" id="8389148" symbol="walkingStepLength"/>
+        <entry field="true" id="8388737" symbol="calories"/>
+        <entry id="24" method="true" symbol="formatUserProfile"/>
+        <entry field="true" id="8389310" symbol="position"/>
+        <entry field="true" id="8388726" symbol="freeMemory"/>
+        <entry id="57" symbol="sensorStressHistory"/>
+        <entry id="8" object="true" symbol="FitConnectIQApp"/>
+        <entry field="true" id="33" symbol="mSteps"/>
+        <entry id="21" method="true" symbol="formatSensorHistorySample"/>
+        <entry id="67" symbol="userProfile"/>
+        <entry id="43" symbol="system"/>
+        <entry id="53" symbol="live"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry field="true" id="11" symbol="mView"/>
-        <entry id="14" method="true" symbol="collectData"/>
-        <entry field="true" id="23" symbol="AppName"/>
+        <entry id="14" method="true" symbol="formatActivityHistory"/>
+        <entry id="58" symbol="bodyBattery"/>
+        <entry id="13" method="true" symbol="formatActiveMinutes"/>
+        <entry field="true" id="25" symbol="mView"/>
+        <entry id="28" method="true" symbol="collectData"/>
+        <entry field="true" id="8389147" symbol="runningStepLength"/>
+        <entry field="true" id="8388962" symbol="temperature"/>
+        <entry id="50" symbol="history"/>
+        <entry field="true" id="38" symbol="AppName"/>
         <entry id="8388633" module="true" symbol="ActivityMonitor"/>
+        <entry field="true" id="8388963" symbol="altitude"/>
+        <entry id="60" symbol="oxygen"/>
+        <entry field="true" id="8389807" symbol="data"/>
+        <entry id="7" object="true" symbol="FitConnectDataFormatter"/>
         <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="52" symbol="sensor"/>
         <entry id="8389345" symbol="rezId"/>
+        <entry field="true" id="8388724" symbol="battery"/>
+        <entry field="true" id="8388912" symbol="steps"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="8389081" method="true" symbol="onBack"/>
+        <entry field="true" id="8388964" symbol="pressure"/>
+        <entry id="18" method="true" symbol="formatPosition"/>
+        <entry field="true" id="8388913" symbol="stepGoal"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="26" symbol="prompt"/>
-        <entry field="true" id="20" symbol="id_monkey"/>
+        <entry field="true" id="41" symbol="prompt"/>
+        <entry id="49" symbol="activityInfo"/>
+        <entry field="true" id="35" symbol="id_monkey"/>
+        <entry field="true" id="8389874" symbol="floorsClimbedGoal"/>
+        <entry id="17" method="true" symbol="formatMoment"/>
+        <entry field="true" id="8389868" symbol="vigorous"/>
+        <entry field="true" id="8388959" symbol="cadence"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
+        <entry field="true" id="8388916" symbol="startOfDay"/>
+        <entry field="true" id="8388721" symbol="min"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389348" symbol="font"/>
-        <entry id="28" symbol="item_2"/>
-        <entry id="27" symbol="item_1"/>
-        <entry id="13" module="true" symbol="Menus"/>
+        <entry field="true" id="8389067" symbol="height"/>
+        <entry id="69" symbol="item_2"/>
+        <entry id="68" symbol="item_1"/>
+        <entry id="27" module="true" symbol="Menus"/>
         <entry id="8389275" method="true" symbol="getApp"/>
         <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry field="true" id="8389672" symbol="screenHeight"/>
         <entry field="true" id="8389063" symbol="identifier"/>
+        <entry id="55" symbol="sensorHeartRateHistory"/>
         <entry id="8389349" symbol="justification"/>
-        <entry id="10" object="true" symbol="FitConnectIQView"/>
+        <entry id="11" object="true" symbol="FitConnectIQView"/>
+        <entry field="true" id="8388722" symbol="sec"/>
+        <entry id="22" method="true" symbol="formatSensorInfo"/>
+        <entry id="48" symbol="activity"/>
+        <entry field="true" id="8388911" symbol="distance"/>
+        <entry field="true" id="8389306" symbol="lon"/>
+        <entry id="8388637" module="true" symbol="Communications"/>
+        <entry id="63" symbol="sensorPressureHistory"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry id="22" object="true" symbol="MainMenu"/>
-        <entry id="8" object="true" symbol="FitConnectIQDelegate"/>
+        <entry id="59" symbol="sensorBodyBatteryHistory"/>
+        <entry id="8388828" method="true" symbol="onError"/>
+        <entry field="true" id="8389873" symbol="floorsDescended"/>
+        <entry id="37" object="true" symbol="MainMenu"/>
+        <entry id="61" symbol="sensorOxygenHistory"/>
+        <entry id="72" symbol="weatherDailyForecast"/>
+        <entry field="true" id="8389305" symbol="lat"/>
+        <entry id="9" object="true" symbol="FitConnectIQDelegate"/>
+        <entry id="71" symbol="weatherCurrentConditions"/>
+        <entry id="64" symbol="elevation"/>
         <entry id="8388644" module="true" symbol="System"/>
+        <entry field="true" id="8389867" symbol="moderate"/>
+        <entry field="true" id="8389401" symbol="is24Hour"/>
         <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry field="true" id="8389143" symbol="weight"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry field="true" id="8388720" symbol="hour"/>
+        <entry id="15" method="true" symbol="formatActivityInfo"/>
+        <entry field="true" id="8388965" symbol="heading"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry field="true" id="15" symbol="mBattery"/>
-        <entry field="true" id="19" symbol="LauncherIcon"/>
+        <entry id="46" symbol="displayMode"/>
+        <entry field="true" id="29" symbol="mBattery"/>
+        <entry field="true" id="34" symbol="LauncherIcon"/>
+        <entry id="44" symbol="clockTime"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8388643" module="true" symbol="Sensor"/>
-        <entry field="true" id="17" symbol="mStatus"/>
+        <entry field="true" id="32" symbol="mStatus"/>
+        <entry id="51" symbol="activityHistory"/>
         <entry id="8389350" module="true" symbol="globals"/>
+        <entry field="true" id="8389151" symbol="birthYear"/>
+        <entry id="47" symbol="systemStats"/>
+        <entry field="true" id="8389583" symbol="alarmCount"/>
+        <entry field="true" id="8388958" symbol="speed"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry field="true" id="8388725" symbol="usedMemory"/>
+        <entry id="62" symbol="sensorTemperatureHistory"/>
+        <entry field="true" id="8388960" symbol="heartRate"/>
+        <entry field="true" id="8389872" symbol="floorsClimbed"/>
         <entry id="8388702" method="true" symbol="initialize"/>
         <entry id="8389279" method="true" symbol="onStart"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
         <entry id="8389109" method="true" symbol="onMenuItem"/>
         <entry field="true" id="8389347" symbol="color"/>
-        <entry id="12" module="true" symbol="Layouts"/>
+        <entry id="65" symbol="sensorElevationHistory"/>
+        <entry id="23" method="true" symbol="formatSystem"/>
+        <entry field="true" id="8389311" symbol="accuracy"/>
+        <entry id="66" symbol="positionInfo"/>
+        <entry id="8388829" method="true" symbol="onComplete"/>
+        <entry field="true" id="30" symbol="mFormatter"/>
+        <entry id="26" module="true" symbol="Layouts"/>
+        <entry id="70" symbol="heartRateHistory"/>
+        <entry field="true" id="8389866" symbol="total"/>
+        <entry field="true" id="8389846" symbol="type"/>
+        <entry id="45" symbol="deviceSettings"/>
+        <entry id="20" method="true" symbol="formatSensorHistoryIterator"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry field="true" id="25" symbol="menu_label_2"/>
-        <entry field="true" id="24" symbol="menu_label_1"/>
+        <entry id="12" object="true" symbol="FitConnectTransmitCallback"/>
+        <entry id="19" method="true" symbol="formatPositionInfo"/>
+        <entry field="true" id="8389584" symbol="notificationCount"/>
+        <entry field="true" id="40" symbol="menu_label_2"/>
+        <entry field="true" id="39" symbol="menu_label_1"/>
+        <entry id="56" symbol="stress"/>
     </symbolTable>
     <localVars>
-        <entry endPc="268435607" name="view" stackId="1" startPc="268435555"/>
-        <entry arg="true" endPc="268435653" name="view" stackId="1" startPc="268435630"/>
-        <entry arg="true" endPc="268435766" name="item" stackId="1" startPc="268435700"/>
-        <entry endPc="268436101" name="clockTime" stackId="1" startPc="268435800"/>
-        <entry endPc="268436101" name="deviceSettings" stackId="2" startPc="268435800"/>
-        <entry endPc="268436101" name="displayMode" stackId="3" startPc="268435800"/>
-        <entry endPc="268436101" name="systemStats" stackId="4" startPc="268435800"/>
-        <entry endPc="268436101" name="timer" stackId="5" startPc="268435800"/>
-        <entry endPc="268436101" name="activityInfo" stackId="6" startPc="268435800"/>
-        <entry endPc="268436101" name="heartRateHistory" stackId="7" startPc="268435800"/>
-        <entry endPc="268436101" name="activityHistory" stackId="8" startPc="268435800"/>
-        <entry endPc="268436101" name="sensorInfo" stackId="9" startPc="268435800"/>
-        <entry endPc="268436101" name="sensorHeartRateHistory" stackId="10" startPc="268435800"/>
-        <entry endPc="268436101" name="sensorStressHistory" stackId="11" startPc="268435800"/>
-        <entry endPc="268436101" name="sensorBodyBatteryHistory" stackId="12" startPc="268435800"/>
-        <entry endPc="268436101" name="sensorOxygenHistory" stackId="13" startPc="268435800"/>
-        <entry endPc="268436101" name="sensorTemperatureHistory" stackId="14" startPc="268435800"/>
-        <entry endPc="268436101" name="sensorPressureHistory" stackId="15" startPc="268435800"/>
-        <entry endPc="268436101" name="sensorElevationHistory" stackId="16" startPc="268435800"/>
-        <entry endPc="268436101" name="positionInfo" stackId="17" startPc="268435800"/>
-        <entry endPc="268436101" name="userProfile" stackId="18" startPc="268435800"/>
-        <entry endPc="268436101" name="weatherCurrentConditions" stackId="19" startPc="268435800"/>
-        <entry endPc="268436101" name="weatherDailyForecast" stackId="20" startPc="268435800"/>
-        <entry endPc="268436101" name="weatherHourlyForecast" stackId="21" startPc="268435800"/>
-        <entry arg="true" endPc="268436293" name="dc" stackId="1" startPc="268436103"/>
-        <entry endPc="268436292" name="w" stackId="2" startPc="268436106"/>
-        <entry endPc="268436292" name="centerX" stackId="3" startPc="268436106"/>
-        <entry arg="true" endPc="268436546" name="dc" stackId="1" startPc="268436294"/>
-        <entry endPc="268436546" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268436305"/>
-        <entry endPc="268436546" name="rez_cmp_local_text_1193959466" stackId="3" startPc="268436305"/>
-        <entry endPc="268436546" name="rez_cmp_local_bitmap_id_monkey" stackId="4" startPc="268436305"/>
+        <entry endPc="268435619" name="view" stackId="1" startPc="268435567"/>
+        <entry arg="true" endPc="268436027" name="data" stackId="1" startPc="268435638"/>
+        <entry arg="true" endPc="268436262" name="clockTime" stackId="1" startPc="268436028"/>
+        <entry arg="true" endPc="268436262" name="deviceSettings" stackId="2" startPc="268436028"/>
+        <entry arg="true" endPc="268436262" name="displayMode" stackId="3" startPc="268436028"/>
+        <entry arg="true" endPc="268436262" name="systemStats" stackId="4" startPc="268436028"/>
+        <entry arg="true" endPc="268436346" name="iterator" stackId="1" startPc="268436263"/>
+        <entry arg="true" endPc="268436346" name="limit" stackId="2" startPc="268436263"/>
+        <entry endPc="268436346" name="result" stackId="3" startPc="268436266"/>
+        <entry endPc="268436343" name="i" stackId="4" startPc="268436293"/>
+        <entry endPc="268436333" name="sample" stackId="5" startPc="268436293"/>
+        <entry arg="true" endPc="268436396" name="position" stackId="1" startPc="268436347"/>
+        <entry endPc="268436396" name="degrees" stackId="2" startPc="268436350"/>
+        <entry arg="true" endPc="268436499" name="info" stackId="1" startPc="268436397"/>
+        <entry arg="true" endPc="268436554" name="activeMinutes" stackId="1" startPc="268436500"/>
+        <entry arg="true" endPc="268436661" name="info" stackId="1" startPc="268436555"/>
+        <entry arg="true" endPc="268436712" name="sample" stackId="1" startPc="268436662"/>
+        <entry arg="true" endPc="268436733" name="moment" stackId="1" startPc="268436713"/>
+        <entry arg="true" endPc="268436927" name="history" stackId="1" startPc="268436734"/>
+        <entry endPc="268436927" name="result" stackId="2" startPc="268436737"/>
+        <entry endPc="268436924" name="i" stackId="3" startPc="268436769"/>
+        <entry endPc="268436914" name="item" stackId="4" startPc="268436769"/>
+        <entry arg="true" endPc="268437030" name="profile" stackId="1" startPc="268436928"/>
+        <entry arg="true" endPc="268437133" name="info" stackId="1" startPc="268437031"/>
+        <entry arg="true" endPc="268437161" name="view" stackId="1" startPc="268437138"/>
+        <entry arg="true" endPc="268437274" name="item" stackId="1" startPc="268437208"/>
+        <entry endPc="268437825" name="clockTime" stackId="1" startPc="268437333"/>
+        <entry endPc="268437825" name="deviceSettings" stackId="2" startPc="268437333"/>
+        <entry endPc="268437825" name="displayMode" stackId="3" startPc="268437333"/>
+        <entry endPc="268437825" name="systemStats" stackId="4" startPc="268437333"/>
+        <entry endPc="268437825" name="timer" stackId="5" startPc="268437333"/>
+        <entry endPc="268437825" name="activityInfo" stackId="6" startPc="268437333"/>
+        <entry endPc="268437825" name="heartRateHistory" stackId="7" startPc="268437333"/>
+        <entry endPc="268437825" name="activityHistory" stackId="8" startPc="268437333"/>
+        <entry endPc="268437825" name="sensorInfo" stackId="9" startPc="268437333"/>
+        <entry endPc="268437825" name="sensorHeartRateHistory" stackId="10" startPc="268437333"/>
+        <entry endPc="268437825" name="sensorStressHistory" stackId="11" startPc="268437333"/>
+        <entry endPc="268437825" name="sensorBodyBatteryHistory" stackId="12" startPc="268437333"/>
+        <entry endPc="268437825" name="sensorOxygenHistory" stackId="13" startPc="268437333"/>
+        <entry endPc="268437825" name="sensorTemperatureHistory" stackId="14" startPc="268437333"/>
+        <entry endPc="268437825" name="sensorPressureHistory" stackId="15" startPc="268437333"/>
+        <entry endPc="268437825" name="sensorElevationHistory" stackId="16" startPc="268437333"/>
+        <entry endPc="268437825" name="positionInfo" stackId="17" startPc="268437333"/>
+        <entry endPc="268437825" name="userProfile" stackId="18" startPc="268437333"/>
+        <entry endPc="268437825" name="weatherCurrentConditions" stackId="19" startPc="268437333"/>
+        <entry endPc="268437825" name="weatherDailyForecast" stackId="20" startPc="268437333"/>
+        <entry endPc="268437825" name="weatherHourlyForecast" stackId="21" startPc="268437333"/>
+        <entry endPc="268437825" name="payload" stackId="22" startPc="268437333"/>
+        <entry endPc="268437825" name="options" stackId="23" startPc="268437333"/>
+        <entry arg="true" endPc="268438017" name="dc" stackId="1" startPc="268437827"/>
+        <entry endPc="268438016" name="w" stackId="2" startPc="268437830"/>
+        <entry endPc="268438016" name="centerX" stackId="3" startPc="268437830"/>
+        <entry arg="true" endPc="268438327" name="dc" stackId="1" startPc="268438075"/>
+        <entry endPc="268438327" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268438086"/>
+        <entry endPc="268438327" name="rez_cmp_local_text_1193959466" stackId="3" startPc="268438086"/>
+        <entry endPc="268438327" name="rez_cmp_local_bitmap_id_monkey" stackId="4" startPc="268438086"/>
     </localVars>
     <deviceInfo deviceVersion="e6263c2a80ff43933f83afa71f1f6645dc2cb4a3" partNumber="006-B4536-00"/>
     <annotations>
@@ -185,19 +369,24 @@
     </annotations>
     <dataEntryOffsetMappings>
         <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
-        <dataEntry label="globals/FitConnectIQApp" offset="152" parentId="globals" symbolId="FitConnectIQApp" type="class"/>
-        <dataEntry label="globals/FitConnectIQDelegate" offset="223" parentId="globals" symbolId="FitConnectIQDelegate" type="class"/>
-        <dataEntry label="globals/Rez" offset="294" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry label="globals/FitConnectIQMenuDelegate" offset="356" parentId="globals" symbolId="FitConnectIQMenuDelegate" type="class"/>
-        <dataEntry label="globals/FitConnectIQView" offset="409" parentId="globals" symbolId="FitConnectIQView" type="class"/>
-        <dataEntry label="globals/Rez/Drawables" offset="507" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry label="globals/Rez/Layouts" offset="551" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry label="globals/Rez/Menus" offset="586" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry label="globals/Rez/Strings" offset="621" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry label="globals/Rez/Menus/MainMenu" offset="683" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry label="globals/FitConnectIQApp" offset="170" parentId="globals" symbolId="FitConnectIQApp" type="class"/>
+        <dataEntry label="globals/FitConnectDataFormatter" offset="241" parentId="globals" symbolId="FitConnectDataFormatter" type="class"/>
+        <dataEntry label="globals/FitConnectIQDelegate" offset="393" parentId="globals" symbolId="FitConnectIQDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="464" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/FitConnectIQMenuDelegate" offset="526" parentId="globals" symbolId="FitConnectIQMenuDelegate" type="class"/>
+        <dataEntry label="globals/FitConnectIQView" offset="579" parentId="globals" symbolId="FitConnectIQView" type="class"/>
+        <dataEntry label="globals/FitConnectTransmitCallback" offset="686" parentId="globals" symbolId="FitConnectTransmitCallback" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="748" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="792" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="827" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="862" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="924" parentId="Menus" symbolId="MainMenu" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
         <functionEntry accessMode="public" endPc="268435471" name="&lt;init&gt;" parent="FitConnectIQApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="FitConnectDataFormatter">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" endPc="268435492" name="getApp" startPc="268435472">
@@ -215,28 +404,86 @@
         <functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="FitConnectIQView" startPc="268435537">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435551" name="onStart" parent="FitConnectIQApp" startPc="268435549">
+        <functionEntry accessMode="public" endPc="268435560" name="&lt;init&gt;" parent="FitConnectTransmitCallback" startPc="268435549">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435563" name="onStart" parent="FitConnectIQApp" startPc="268435561">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435607" name="getInitialView" parent="FitConnectIQApp" startPc="268435552">
+        <functionEntry accessMode="public" endPc="268435619" name="getInitialView" parent="FitConnectIQApp" startPc="268435564">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435622" name="initialize" parent="FitConnectIQApp" startPc="268435608">
+        <functionEntry accessMode="public" endPc="268435634" name="initialize" parent="FitConnectIQApp" startPc="268435620">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435625" name="onStop" parent="FitConnectIQApp" startPc="268435623">
+        <functionEntry accessMode="public" endPc="268435637" name="onStop" parent="FitConnectIQApp" startPc="268435635">
             <param id="state"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435629" name="onBack" parent="FitConnectIQDelegate" startPc="268435626">
+        <functionEntry accessMode="public" endPc="268436027" name="formatData" parent="FitConnectDataFormatter" startPc="268435638">
+            <param id="data"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435653" name="initialize" parent="FitConnectIQDelegate" startPc="268435630">
+        <functionEntry accessMode="public" endPc="268436262" name="formatSystem" parent="FitConnectDataFormatter" startPc="268436028">
+            <param id="clockTime"/>
+            <param id="deviceSettings"/>
+            <param id="displayMode"/>
+            <param id="systemStats"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436346" name="formatSensorHistoryIterator" parent="FitConnectDataFormatter" startPc="268436263">
+            <param id="iterator"/>
+            <param id="limit"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436396" name="formatPosition" parent="FitConnectDataFormatter" startPc="268436347">
+            <param id="position"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436499" name="formatSensorInfo" parent="FitConnectDataFormatter" startPc="268436397">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436554" name="formatActiveMinutes" parent="FitConnectDataFormatter" startPc="268436500">
+            <param id="activeMinutes"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436661" name="formatPositionInfo" parent="FitConnectDataFormatter" startPc="268436555">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436712" name="formatSensorHistorySample" parent="FitConnectDataFormatter" startPc="268436662">
+            <param id="sample"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436733" name="formatMoment" parent="FitConnectDataFormatter" startPc="268436713">
+            <param id="moment"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436927" name="formatActivityHistory" parent="FitConnectDataFormatter" startPc="268436734">
+            <param id="history"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437030" name="formatUserProfile" parent="FitConnectDataFormatter" startPc="268436928">
+            <param id="profile"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437133" name="formatActivityInfo" parent="FitConnectDataFormatter" startPc="268437031">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="FitConnectDataFormatter">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437137" name="onBack" parent="FitConnectIQDelegate" startPc="268437134">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268437161" name="initialize" parent="FitConnectIQDelegate" startPc="268437138">
             <param id="view"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435699" name="onSelect" parent="FitConnectIQDelegate" startPc="268435654">
+        <functionEntry accessMode="public" endPc="268437207" name="onSelect" parent="FitConnectIQDelegate" startPc="268437162">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
@@ -251,31 +498,40 @@
         <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435766" name="onMenuItem" parent="FitConnectIQMenuDelegate" startPc="268435700">
+        <functionEntry accessMode="public" endPc="268437274" name="onMenuItem" parent="FitConnectIQMenuDelegate" startPc="268437208">
             <param id="item"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435781" name="initialize" parent="FitConnectIQMenuDelegate" startPc="268435767">
+        <functionEntry accessMode="public" endPc="268437289" name="initialize" parent="FitConnectIQMenuDelegate" startPc="268437275">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268435796" name="initialize" parent="FitConnectIQView" startPc="268435782">
+        <functionEntry accessMode="public" endPc="268437329" name="initialize" parent="FitConnectIQView" startPc="268437290">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436102" name="collectData" parent="FitConnectIQView" startPc="268435797">
+        <functionEntry accessMode="public" endPc="268437826" name="collectData" parent="FitConnectIQView" startPc="268437330">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436293" name="onUpdate" parent="FitConnectIQView" startPc="268436103">
+        <functionEntry accessMode="public" endPc="268438017" name="onUpdate" parent="FitConnectIQView" startPc="268437827">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436546" name="MainLayout" parent="Layouts" startPc="268436294">
+        <functionEntry accessMode="public" endPc="268438038" name="onError" parent="FitConnectTransmitCallback" startPc="268438018">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438059" name="onComplete" parent="FitConnectTransmitCallback" startPc="268438039">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438074" name="initialize" parent="FitConnectTransmitCallback" startPc="268438060">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268438327" name="MainLayout" parent="Layouts" startPc="268438075">
             <param id="dc"/>
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436558" name="&lt;init&gt;" parent="MainMenu" startPc="268436547">
+        <functionEntry accessMode="public" endPc="268438339" name="&lt;init&gt;" parent="MainMenu" startPc="268438328">
             <documentation/>
         </functionEntry>
-        <functionEntry accessMode="public" endPc="268436663" name="initialize" parent="MainMenu" startPc="268436559">
+        <functionEntry accessMode="public" endPc="268438444" name="initialize" parent="MainMenu" startPc="268438340">
             <documentation/>
         </functionEntry>
     </functions>

@@ -3,6 +3,9 @@ import Toybox.WatchUi;
 import Toybox.System;
 import Toybox.ActivityMonitor;
 import Toybox.Sensor;
+import Toybox.Communications;
+
+
 
 class FitConnectIQView extends WatchUi.View {
 
@@ -10,14 +13,17 @@ class FitConnectIQView extends WatchUi.View {
     hidden var mSteps = "--";
     hidden var mBattery = "--";
     hidden var mStatus = "Press START";
+    hidden var mFormatter;
+
        
        
     function initialize() {
         View.initialize();
+        mFormatter = new FitConnectDataFormatter();
     }
 
 
-function collectData() {
+    function collectData() {
 
     // ====================
     // System
@@ -75,10 +81,48 @@ function collectData() {
     var weatherDailyForecast = Weather.getDailyForecast();
     var weatherHourlyForecast = Weather.getHourlyForecast();
 
-    // BREAKPOINT HERE
-    System.println("Data collected");
-}
+    
+    var payload = mFormatter.formatData({
+    :clockTime => clockTime,
+    :deviceSettings => deviceSettings,
+    :displayMode => displayMode,
+    :systemStats => systemStats,
+    :timer => timer,
 
+    :activityInfo => activityInfo,
+    :heartRateHistory => heartRateHistory,
+    :activityHistory => activityHistory,
+
+    :sensorInfo => sensorInfo,
+
+    :sensorHeartRateHistory => sensorHeartRateHistory,
+    :sensorStressHistory => sensorStressHistory,
+    :sensorBodyBatteryHistory => sensorBodyBatteryHistory,
+    :sensorOxygenHistory => sensorOxygenHistory,
+    :sensorTemperatureHistory => sensorTemperatureHistory,
+    :sensorPressureHistory => sensorPressureHistory,
+    :sensorElevationHistory => sensorElevationHistory,
+
+    :positionInfo => positionInfo,
+
+    :userProfile => userProfile,
+
+    :weatherCurrentConditions => weatherCurrentConditions,
+    :weatherDailyForecast => weatherDailyForecast,
+    :weatherHourlyForecast => weatherHourlyForecast
+});
+
+    // Put breakpoint here and inspect payload
+    System.println("Payload created");
+
+    var options = null;
+
+    // Communications.transmit(
+    //     payload,
+    //     options,
+    //     new FitConnectTransmitCallback()
+    // );
+}
         function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
