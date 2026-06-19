@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Android build output
+build/
+.gradle/
+.cxx/
+
+# Android Studio / IntelliJ
+.idea/
+*.iml
+
+# Local machine configuration
+local.properties
+
+# Profiling / crash dumps
+*.hprof
+
+# Generated inline modules
+app/src/main/java/inline/
+
+# React Native bundle artifacts
+*.jsbundle

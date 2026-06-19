@@ -4,126 +4,75 @@ import Toybox.System;
 import Toybox.ActivityMonitor;
 import Toybox.Sensor;
 import Toybox.Communications;
-
-
+import Toybox.SensorHistory;
+import Toybox.Position;
+import Toybox.UserProfile;
+import Toybox.Weather;
 
 class FitConnectIQView extends WatchUi.View {
 
-    hidden var mHeartRate = "--";
-    hidden var mSteps = "--";
-    hidden var mBattery = "--";
-    hidden var mStatus = "Press START";
     hidden var mFormatter;
 
-       
-       
+    hidden var mStatus = "Ready";
+    hidden var mLastAction = "--";
+    hidden var mLastResult = "--";
+    hidden var mLastTimer = "--";
+    hidden var mTransmitInProgress = false;
+
     function initialize() {
         View.initialize();
         mFormatter = new FitConnectDataFormatter();
     }
 
-
     function collectData() {
+        if (mTransmitInProgress) {
+            setWatchStatus("Busy", "Transmit", "Already in progress");
+            return;
+        }
 
-    // ====================
-    // System
-    // ====================
+        setWatchStatus("Collecting", "Payload", "Reading sensors");
 
-    var clockTime = System.getClockTime();
-    var deviceSettings = System.getDeviceSettings();
-    var displayMode = System.getDisplayMode();
-    var systemStats = System.getSystemStats();
-    var timer = System.getTimer();
+        var mockPayload = {
+            "KEY_MESSAGE_TYPE" => "ping",
+            "KEY_MESSAGE_PAYLOAD" => {
+                "timer" =>System.getTimer()
+                }
+        };
 
-    // ====================
-    // Activity Monitor
-    // ====================
+        setWatchStatus("Sending", "Payload", "Ping created");
 
-    var activityInfo = ActivityMonitor.getInfo();
-    var heartRateHistory = ActivityMonitor.getHeartRateHistory(null, false);
-    var activityHistory = ActivityMonitor.getHistory();
+        mTransmitInProgress = true;
 
-    // ====================
-    // Live Sensors
-    // ====================
+        Communications.transmit(
+            mockPayload,
+            null,
+            new FitConnectTransmitCallback(self)
+        );
 
-    var sensorInfo = Sensor.getInfo();
+        setWatchStatus("Waiting", "Transmit", "Queued");
+    }
 
-    // ====================
-    // Sensor History
-    // ====================
+    function setWatchStatus(status, action, result) {
+        mStatus = status;
+        mLastAction = action;
+        mLastResult = result;
+        mLastTimer = System.getTimer().toString();
 
-    var sensorHeartRateHistory = SensorHistory.getHeartRateHistory({});
-    var sensorStressHistory = SensorHistory.getStressHistory({});
-    var sensorBodyBatteryHistory = SensorHistory.getBodyBatteryHistory({});
-    var sensorOxygenHistory = SensorHistory.getOxygenSaturationHistory({});
-    var sensorTemperatureHistory = SensorHistory.getTemperatureHistory({});
-    var sensorPressureHistory = SensorHistory.getPressureHistory({});
-    var sensorElevationHistory = SensorHistory.getElevationHistory({});
+        System.println(status + " | " + action + " | " + result);
+        WatchUi.requestUpdate();
+    }
 
-    // ====================
-    // Position
-    // ====================
+    function onTransmitFinished(success) {
+        mTransmitInProgress = false;
 
-    var positionInfo = Position.getInfo();
+        if (success) {
+            setWatchStatus("Ready", "Transmit", "Complete");
+        } else {
+            setWatchStatus("Ready", "Transmit", "Error");
+        }
+    }
 
-    // ====================
-    // User Profile
-    // ====================
-
-    var userProfile = UserProfile.getProfile();
-
-    // ====================
-    // Weather
-    // ====================
-
-    var weatherCurrentConditions = Weather.getCurrentConditions();
-    var weatherDailyForecast = Weather.getDailyForecast();
-    var weatherHourlyForecast = Weather.getHourlyForecast();
-
-    
-    var payload = mFormatter.formatData({
-    :clockTime => clockTime,
-    :deviceSettings => deviceSettings,
-    :displayMode => displayMode,
-    :systemStats => systemStats,
-    :timer => timer,
-
-    :activityInfo => activityInfo,
-    :heartRateHistory => heartRateHistory,
-    :activityHistory => activityHistory,
-
-    :sensorInfo => sensorInfo,
-
-    :sensorHeartRateHistory => sensorHeartRateHistory,
-    :sensorStressHistory => sensorStressHistory,
-    :sensorBodyBatteryHistory => sensorBodyBatteryHistory,
-    :sensorOxygenHistory => sensorOxygenHistory,
-    :sensorTemperatureHistory => sensorTemperatureHistory,
-    :sensorPressureHistory => sensorPressureHistory,
-    :sensorElevationHistory => sensorElevationHistory,
-
-    :positionInfo => positionInfo,
-
-    :userProfile => userProfile,
-
-    :weatherCurrentConditions => weatherCurrentConditions,
-    :weatherDailyForecast => weatherDailyForecast,
-    :weatherHourlyForecast => weatherHourlyForecast
-});
-
-    // Put breakpoint here and inspect payload
-    System.println("Payload created");
-
-    var options = null;
-
-    // Communications.transmit(
-    //     payload,
-    //     options,
-    //     new FitConnectTransmitCallback()
-    // );
-}
-        function onUpdate(dc) {
+    function onUpdate(dc) {
         dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
         dc.clear();
 
@@ -132,14 +81,17 @@ class FitConnectIQView extends WatchUi.View {
 
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawText(centerX, 35, Graphics.FONT_MEDIUM, "FitConnect", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, 30, Graphics.FONT_MEDIUM, "FitConnect", Graphics.TEXT_JUSTIFY_CENTER);
 
-        dc.drawText(centerX, 90, Graphics.FONT_SMALL, "HR: " + mHeartRate, Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(centerX, 125, Graphics.FONT_SMALL, "Steps: " + mSteps, Graphics.TEXT_JUSTIFY_CENTER);
-        dc.drawText(centerX, 160, Graphics.FONT_SMALL, "Battery: " + mBattery, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, 75, Graphics.FONT_SMALL, "Status: " + mStatus, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, 110, Graphics.FONT_SMALL, "Action: " + mLastAction, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, 145, Graphics.FONT_SMALL, "Result: " + mLastResult, Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(centerX, 180, Graphics.FONT_XTINY, "Timer: " + mLastTimer, Graphics.TEXT_JUSTIFY_CENTER);
 
-        dc.drawText(centerX, 215, Graphics.FONT_XTINY, mStatus, Graphics.TEXT_JUSTIFY_CENTER);
+        if (mTransmitInProgress) {
+            dc.drawText(centerX, 220, Graphics.FONT_XTINY, "Please wait...", Graphics.TEXT_JUSTIFY_CENTER);
+        } else {
+            dc.drawText(centerX, 220, Graphics.FONT_XTINY, "Press START to send", Graphics.TEXT_JUSTIFY_CENTER);
+        }
     }
-
-
 }

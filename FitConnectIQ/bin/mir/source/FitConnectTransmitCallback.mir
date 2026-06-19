@@ -1,48 +1,74 @@
-[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 2; @symbol_classdef = [FitConnectTransmitCallback,2,6,32]; @symbol_extends<0> = [Toybox,2,41,47]; @symbol_extends<1> = [Communications,2,48,62]; @symbol_extends<2> = [ConnectionListener,2,63,81]; ]
-class FitConnectTransmitCallback extends Toybox.Communications.ConnectionListener {
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 2; ]
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Communications,1,14,28]; ]
+import Toybox.Communications;
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 5; @symbol_classdef = [FitConnectTransmitCallback,5,6,32]; @symbol_extends<0> = [Communications,5,41,55]; @symbol_extends<1> = [ConnectionListener,5,56,74]; ]
+class FitConnectTransmitCallback extends Communications.ConnectionListener {
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 5; ]
     <init> {
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 2; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 5; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 4; @symbol_functiondef = [initialize,4,13,23]; ]
-    function initialize() as Void {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_4_26_6_4_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc" 5 8 ]
-        symbol [ ConnectionListener %tmp.2 5 8 26 ];
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 7; @position = 15; @symbol_vardef = [mView,7,15,20]; ]
+    protected
+    var mView;
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; @symbol_param<0> = [view,9,24,28]; ]
+    function initialize(view) as Void {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_9_30_12_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc" 10 8 ]
+        symbol [ ConnectionListener %tmp.2 10 8 26 ];
         %tmp.2 = getv ? :ConnectionListener;
-        symbol [ initialize %tmp.3 5 27 37 ];
+        symbol [ initialize %tmp.3 10 27 37 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_4_26_6_4_stop:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc" 11 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 11 16 20 ];
+        symbol [ mView ? 11 8 13 ];
+        putv self :mView %tmp.4;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_9_30_12_4_stop:
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 8; @symbol_functiondef = [onComplete,8,13,23]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 14; @symbol_functiondef = [onComplete,14,13,23]; ]
     function onComplete() {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_8_26_10_4_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc" 9 8 ]
-        symbol [ System %tmp.2 9 8 14 ];
-        %tmp.2 = getv ? :System;
-        symbol [ println %tmp.3 9 15 22 ];
-        %tmp.3 = getv function %tmp.2 :println;
-        %tmp.4 = "Transmit complete";
-        invoke %tmp.2 %tmp.3(%tmp.4);
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_8_26_10_4_stop:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_14_26_17_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc" 15 8 ]
+        symbol [ System %tmp.1 15 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 15 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Transmit complete";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc" 16 8 ]
+        symbol [ mView %tmp.5 16 8 13 ];
+        %tmp.5 = getv ? :mView;
+        symbol [ onTransmitFinished %tmp.6 16 14 32 ];
+        %tmp.6 = getv function %tmp.5 :onTransmitFinished;
+        %tmp.7 = true;
+        invoke %tmp.5 %tmp.6(%tmp.7);
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_14_26_17_4_stop:
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 12; @symbol_functiondef = [onError,12,13,20]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 19; @symbol_functiondef = [onError,19,13,20]; ]
     function onError() {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_12_23_14_4_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc" 13 8 ]
-        symbol [ System %tmp.2 13 8 14 ];
-        %tmp.2 = getv ? :System;
-        symbol [ println %tmp.3 13 15 22 ];
-        %tmp.3 = getv function %tmp.2 :println;
-        %tmp.4 = "Transmit error";
-        invoke %tmp.2 %tmp.3(%tmp.4);
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_12_23_14_4_stop:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_19_23_22_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc" 20 8 ]
+        symbol [ System %tmp.1 20 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 20 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Transmit error";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc" 21 8 ]
+        symbol [ mView %tmp.5 21 8 13 ];
+        %tmp.5 = getv ? :mView;
+        symbol [ onTransmitFinished %tmp.6 21 14 32 ];
+        %tmp.6 = getv function %tmp.5 :onTransmitFinished;
+        %tmp.7 = false;
+        invoke %tmp.5 %tmp.6(%tmp.7);
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectTransmitCallback_mc_19_23_22_4_stop:
     }
 }
-[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 2; ]
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectTransmitCallback.mc"; @line = 1; ]
 <init> {
 }
