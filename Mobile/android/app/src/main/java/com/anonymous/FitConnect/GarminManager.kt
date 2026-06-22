@@ -19,11 +19,12 @@ object GarminManager :
     IQApplicationEventListener,
     IQDeviceEventListener {
 
-    private const val WATCH_APP_UUID = "3051d135-d055-4657-8548-018c798198a5"
-
-    // Important:
-    // In TETHERED simulator mode, Garmin Android SDK may require empty app id.
-    private const val SIMULATOR_APP_UUID = ""
+    // Garmin's Android sample uses the manifest UUID as 32 hexadecimal
+    // characters (without separators) for IQApp registration and messaging.
+    private const val WATCH_APP_ID = "3051d135d05546578548018c798198a5"
+    // A physical Android phone connected to the desktop watch simulator still
+    // uses Garmin's ADB-backed TETHERED transport.
+    private const val USE_TETHERED_SIMULATOR = true
 
     @Volatile
     var status: String = "GarminManager created"
@@ -31,13 +32,24 @@ object GarminManager :
     @Volatile
     var lastMessage: String = "No message yet"
 
+    @Volatile
+    var receivedMessageCount: Int = 0
+
+    @Volatile
+    var lastReceivedAt: Long = 0
+
     private var appContext: Context? = null
     private var connectIQ: ConnectIQ? = null
     private var selectedDevice: IQDevice? = null
     private var listenerRegistered = false
 
-    private val simulatorApp = IQApp("")
-    private val realWatchApp = IQApp(WATCH_APP_UUID)
+    private val connectType = if (USE_TETHERED_SIMULATOR) {
+        IQConnectType.TETHERED
+    } else {
+        IQConnectType.WIRELESS
+    }
+
+    private val activeApp = IQApp(WATCH_APP_ID)
 
     fun initialize(activity: Activity) {
         appContext = activity.applicationContext
@@ -45,7 +57,7 @@ object GarminManager :
 
         connectIQ = ConnectIQ.getInstance(
             appContext,
-            IQConnectType.TETHERED
+            connectType
         )
 
         try {
@@ -90,7 +102,7 @@ object GarminManager :
                 return
             }
 
-            val device = knownDevices[0]
+            val device = connectedDevices.firstOrNull() ?: knownDevices[0]
             selectedDevice = device
 
             lastMessage =
@@ -99,7 +111,18 @@ object GarminManager :
                 "Known count: ${knownDevices.size}\n" +
                 "Connected count: ${connectedDevices.size}"
 
-            registerDevice(device)
+            registerDeviceEvents(device)
+
+            if (connectedDevices.any { it.deviceIdentifier == device.deviceIdentifier }) {
+                registerAppListeners(device)
+            } else {
+                listenerRegistered = false
+                status = if (USE_TETHERED_SIMULATOR) {
+                    "Waiting for simulator connection"
+                } else {
+                    "Waiting for Garmin watch connection"
+                }
+            }
 
         } catch (e: InvalidStateException) {
             status = "Invalid state while reading devices"
@@ -113,7 +136,7 @@ object GarminManager :
         }
     }
 
-    private fun registerDevice(device: IQDevice) {
+    private fun registerDeviceEvents(device: IQDevice) {
         val ciq = connectIQ
 
         if (ciq == null) {
@@ -129,20 +152,29 @@ object GarminManager :
             lastMessage = e.toString()
             return
         }
+    }
+
+    private fun registerAppListeners(device: IQDevice) {
+        val ciq = connectIQ
+
+        if (ciq == null) {
+            status = "ConnectIQ is null during app register"
+            return
+        }
 
         try {
-            // For simulator/tethered mode.
-            ciq.registerForAppEvents(device, simulatorApp, this)
-            ciq.registerForAppEvents(device, realWatchApp, this)
+            ciq.registerForAppEvents(device, activeApp, this)
 
             listenerRegistered = true
-            status = "Both listeners registered"
-            lastMessage =
-                "Registered simulator app id: <empty>\n" +
-                "Registered real app id: $WATCH_APP_UUID"
+            status = if (USE_TETHERED_SIMULATOR) {
+                "Simulator listener registered"
+            } else {
+                "Physical watch listener registered"
+            }
+            lastMessage = "Registered app id: ${activeApp.applicationId}"
                 
         } catch (e: Exception) {
-            status = "Simulator app listener registration failed"
+            status = "Garmin app listener registration failed"
             lastMessage = e.toString()
         }
     }
@@ -153,9 +185,12 @@ object GarminManager :
     ) {
         status = "Device status: ${device?.friendlyName} = $deviceStatus"
 
-        if (device != null && !listenerRegistered) {
+        if (device != null && deviceStatus == IQDevice.IQDeviceStatus.CONNECTED) {
             selectedDevice = device
-            registerDevice(device)
+            registerAppListeners(device)
+        } else if (deviceStatus != IQDevice.IQDeviceStatus.CONNECTED) {
+            listenerRegistered = false
+            selectedDevice = null
         }
     }
 
@@ -172,6 +207,8 @@ object GarminManager :
             return
         }
 
+        receivedMessageCount += 1
+        lastReceivedAt = System.currentTimeMillis()
         lastMessage =
             "Device: ${device?.friendlyName}\n" +
             "App: $app\n" +
@@ -188,5 +225,31 @@ object GarminManager :
 
     fun getDebugMessage(): String {
         return lastMessage
+    }
+
+    fun isPhysicalDeviceMode(): Boolean {
+        return !USE_TETHERED_SIMULATOR
+    }
+
+    fun sendPingToWatch() {
+        val ciq = connectIQ
+        val device = selectedDevice
+
+        if (ciq == null || device == null) {
+            status = "Cannot send: ciq/device null"
+            return
+        }
+
+        status = "Sending Android ping"
+
+        try {
+            ciq.sendMessage(device, activeApp, "hello from Android") { _, _, sendStatus ->
+                status = "Android send status: $sendStatus"
+                lastMessage = "Android → Watch ping attempted"
+            }
+        } catch (e: Exception) {
+            status = "Android send exception"
+            lastMessage = e.toString()
+        }
     }
 }

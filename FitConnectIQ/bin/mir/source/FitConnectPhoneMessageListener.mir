@@ -1,0 +1,77 @@
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Communications,1,14,28]; ]
+import Toybox.Communications;
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc"; @line = 2; @symbol_importdef<0> = [Toybox,2,7,13]; @symbol_importdef<1> = [System,2,14,20]; ]
+import Toybox.System;
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc"; @line = 5; @symbol_classdef = [FitConnectPhoneMessageListener,5,6,36]; @symbol_extends<0> = [Communications,5,45,59]; @symbol_extends<1> = [MessageListener,5,60,75]; ]
+class FitConnectPhoneMessageListener extends Communications.MessageListener {
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc"; @line = 7; @position = 15; @symbol_vardef = [mView,7,15,20]; ]
+    protected
+    var mView;
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc"; @line = 9; @symbol_functiondef = [initialize,9,13,23]; @symbol_param<0> = [view,9,24,28]; ]
+    function initialize(view) as Void {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_9_30_12_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc" 10 8 ]
+        symbol [ MessageListener %tmp.2 10 8 23 ];
+        %tmp.2 = getv ? :MessageListener;
+        symbol [ initialize %tmp.3 10 24 34 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc" 11 8 ]
+        %tmp.4 = lgetv %view;
+        symbol [ view %tmp.4 11 16 20 ];
+        symbol [ mView ? 11 8 13 ];
+        putv self :mView %tmp.4;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_9_30_12_4_stop:
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc"; @line = 14; @symbol_functiondef = [onReceive,14,13,22]; @symbol_param<0> = [message,14,23,30]; ]
+    function onReceive(message) {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_14_32_21_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc" 15 8 ]
+        symbol [ System %tmp.1 15 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 15 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "Phone message received:";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc" 16 8 ]
+        symbol [ System %tmp.4 16 8 14 ];
+        %tmp.4 = getm $.Toybox.System;
+        symbol [ println %tmp.5 16 15 22 ];
+        %tmp.5 = getv function %tmp.4 :println;
+        %tmp.6 = lgetv %message;
+        symbol [ message %tmp.6 16 23 30 ];
+        invoke %tmp.4 %tmp.5(%tmp.6);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc" 18 8 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_18_8_20_8_if_stmt:
+        symbol [ mView %tmp.8 18 12 17 ];
+        %tmp.8 = getv ? :mView;
+        %tmp.9 = null;
+        %tmp.10 = ne %tmp.8 %tmp.9;
+        bf %tmp.10 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_18_8_20_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_18_8_20_8_if_true:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_18_27_20_8_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc" 19 12 ]
+        symbol [ mView %tmp.12 19 12 17 ];
+        %tmp.12 = getv ? :mView;
+        %tmp.13 = as %tmp.12 { (!Null) };
+        symbol [ onReceivePhoneMessage %tmp.14 19 18 39 ];
+        %tmp.14 = getv function %tmp.13 :onReceivePhoneMessage;
+        %tmp.15 = lgetv %message;
+        symbol [ message %tmp.15 19 40 47 ];
+        invoke %tmp.13 %tmp.14(%tmp.15);
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_18_27_20_8_stop:
+        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_18_8_20_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_18_8_20_8_if_end:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectPhoneMessageListener_mc_14_32_21_4_stop:
+    }
+}
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectPhoneMessageListener.mc"; @line = 1; ]
+<init> {
+}

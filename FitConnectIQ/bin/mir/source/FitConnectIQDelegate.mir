@@ -32,7 +32,7 @@ C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegat
     }
     [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc"; @line = 13; @symbol_functiondef = [onSelect,13,13,21]; ]
     function onSelect() {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_13_24_21_4_start:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_13_24_17_4_start:
 [ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 14 8 ]
         symbol [ System %tmp.1 14 8 14 ];
         %tmp.1 = getm $.Toybox.System;
@@ -41,36 +41,66 @@ C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegat
         %tmp.3 = "SELECT pressed";
         invoke %tmp.1 %tmp.2(%tmp.3);
 [ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 16 8 ]
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_16_8_18_8_if_stmt:
-        symbol [ mView %tmp.5 16 12 17 ];
-        %tmp.5 = getv ? :mView;
-        %tmp.6 = null;
-        %tmp.7 = ne %tmp.5 %tmp.6;
-        bf %tmp.7 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_16_8_18_8_if_end;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_16_8_18_8_if_true:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_16_27_18_8_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 17 12 ]
-        symbol [ mView %tmp.9 17 12 17 ];
-        %tmp.9 = getv ? :mView;
-        %tmp.10 = as %tmp.9 { (!Null) };
-        symbol [ collectData %tmp.11 17 18 29 ];
-        %tmp.11 = getv function %tmp.10 :collectData;
-        invoke %tmp.10 %tmp.11();
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_16_27_18_8_stop:
-        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_16_8_18_8_if_end;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_16_8_18_8_if_end:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 20 8 ]
-        %tmp.12 = true;
-        ret %tmp.12;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_13_24_21_4_stop:
+        %tmp.4 = self;
+        symbol [ sendPayload %tmp.5 16 15 26 ];
+        %tmp.5 = getv function %tmp.4 :sendPayload;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        ret %tmp.6;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_13_24_17_4_stop:
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc"; @line = 23; @symbol_functiondef = [onBack,23,13,19]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc"; @line = 19; @symbol_functiondef = [onTap,19,13,18]; @symbol_param<0> = [clickEvent,19,19,29]; ]
+    function onTap(clickEvent) {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_19_31_23_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 20 8 ]
+        symbol [ System %tmp.1 20 8 14 ];
+        %tmp.1 = getm $.Toybox.System;
+        symbol [ println %tmp.2 20 15 22 ];
+        %tmp.2 = getv function %tmp.1 :println;
+        %tmp.3 = "SCREEN tapped";
+        invoke %tmp.1 %tmp.2(%tmp.3);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 22 8 ]
+        %tmp.4 = self;
+        symbol [ sendPayload %tmp.5 22 15 26 ];
+        %tmp.5 = getv function %tmp.4 :sendPayload;
+        %tmp.6 = invoke %tmp.4 %tmp.5();
+        ret %tmp.6;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_19_31_23_4_stop:
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc"; @line = 25; @symbol_functiondef = [sendPayload,25,20,31]; ]
+    protected
+    function sendPayload() {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_25_34_32_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 27 8 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_27_8_29_8_if_stmt:
+        symbol [ mView %tmp.2 27 12 17 ];
+        %tmp.2 = getv ? :mView;
+        %tmp.3 = null;
+        %tmp.4 = ne %tmp.2 %tmp.3;
+        bf %tmp.4 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_27_8_29_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_27_8_29_8_if_true:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_27_27_29_8_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 28 12 ]
+        symbol [ mView %tmp.6 28 12 17 ];
+        %tmp.6 = getv ? :mView;
+        %tmp.7 = as %tmp.6 { (!Null) };
+        symbol [ collectData %tmp.8 28 18 29 ];
+        %tmp.8 = getv function %tmp.7 :collectData;
+        invoke %tmp.7 %tmp.8();
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_27_27_29_8_stop:
+        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_27_8_29_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_27_8_29_8_if_end:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 31 8 ]
+        %tmp.9 = true;
+        ret %tmp.9;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_25_34_32_4_stop:
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc"; @line = 34; @symbol_functiondef = [onBack,34,13,19]; ]
     function onBack() {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_23_22_25_4_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 24 8 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_34_22_36_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc" 35 8 ]
         %tmp.1 = false;
         ret %tmp.1;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_23_22_25_4_stop:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQDelegate_mc_34_22_36_4_stop:
     }
 }
 [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQDelegate.mc"; @line = 1; ]

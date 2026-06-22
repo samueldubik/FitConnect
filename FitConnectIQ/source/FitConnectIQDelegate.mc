@@ -13,6 +13,17 @@ class FitConnectIQDelegate extends WatchUi.BehaviorDelegate {
     function onSelect() {
         System.println("SELECT pressed");
 
+        return sendPayload();
+    }
+
+    function onTap(clickEvent) {
+        System.println("SCREEN tapped");
+
+        return sendPayload();
+    }
+
+    hidden function sendPayload() {
+
         if (mView != null) {
             mView.collectData();
         }

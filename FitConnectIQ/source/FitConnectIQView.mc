@@ -8,6 +8,7 @@ import Toybox.SensorHistory;
 import Toybox.Position;
 import Toybox.UserProfile;
 import Toybox.Weather;
+import Toybox.Timer;
 
 class FitConnectIQView extends WatchUi.View {
 
@@ -18,13 +19,21 @@ class FitConnectIQView extends WatchUi.View {
     hidden var mLastResult = "--";
     hidden var mLastTimer = "--";
     hidden var mTransmitInProgress = false;
+    hidden var mTransportBlocked = false;
+    hidden var mTransmitTimer;
 
     function initialize() {
         View.initialize();
         mFormatter = new FitConnectDataFormatter();
+        mTransmitTimer = new Timer.Timer();
     }
 
     function collectData() {
+        if (mTransportBlocked) {
+            setWatchStatus("Blocked", "Transmit", "Restart app to retry");
+            return;
+        }
+
         if (mTransmitInProgress) {
             setWatchStatus("Busy", "Transmit", "Already in progress");
             return;
@@ -32,24 +41,31 @@ class FitConnectIQView extends WatchUi.View {
 
         setWatchStatus("Collecting", "Payload", "Reading sensors");
 
-        var mockPayload = {
-            "KEY_MESSAGE_TYPE" => "ping",
-            "KEY_MESSAGE_PAYLOAD" => {
-                "timer" =>System.getTimer()
-                }
-        };
+        var mockPayload = "ping from watch";
 
-        setWatchStatus("Sending", "Payload", "Ping created");
+        setWatchStatus("Sending", "Payload", mockPayload);
 
         mTransmitInProgress = true;
 
         Communications.transmit(
             mockPayload,
-            null,
+            {},
             new FitConnectTransmitCallback(self)
         );
 
+        mTransmitTimer.start(method(:onTransmitTimeout), 6000, false);
+
         setWatchStatus("Waiting", "Transmit", "Queued");
+    }
+
+    function onTransmitTimeout() as Void {
+        if (!mTransmitInProgress) {
+            return;
+        }
+
+        mTransmitInProgress = false;
+        mTransportBlocked = true;
+        setWatchStatus("Timeout", "Transmit", "Blocked after 6s");
     }
 
     function setWatchStatus(status, action, result) {
@@ -63,7 +79,9 @@ class FitConnectIQView extends WatchUi.View {
     }
 
     function onTransmitFinished(success) {
+        mTransmitTimer.stop();
         mTransmitInProgress = false;
+        mTransportBlocked = false;
 
         if (success) {
             setWatchStatus("Ready", "Transmit", "Complete");
@@ -93,5 +111,9 @@ class FitConnectIQView extends WatchUi.View {
         } else {
             dc.drawText(centerX, 220, Graphics.FONT_XTINY, "Press START to send", Graphics.TEXT_JUSTIFY_CENTER);
         }
+    }
+
+    function onReceivePhoneMessage(message) {
+        setWatchStatus("Received", "Android -> Watch", message.toString());
     }
 }

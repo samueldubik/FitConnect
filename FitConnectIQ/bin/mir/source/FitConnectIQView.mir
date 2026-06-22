@@ -18,443 +18,539 @@ import Toybox.Position;
 import Toybox.UserProfile;
 [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 10; @symbol_importdef<0> = [Toybox,10,7,13]; @symbol_importdef<1> = [Weather,10,14,21]; ]
 import Toybox.Weather;
-[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 12; @symbol_classdef = [FitConnectIQView,12,6,22]; @symbol_extends<0> = [WatchUi,12,31,38]; @symbol_extends<1> = [View,12,39,43]; ]
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 11; @symbol_importdef<0> = [Toybox,11,7,13]; @symbol_importdef<1> = [Timer,11,14,19]; ]
+import Toybox.Timer;
+[ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 13; @symbol_classdef = [FitConnectIQView,13,6,22]; @symbol_extends<0> = [WatchUi,13,31,38]; @symbol_extends<1> = [View,13,39,43]; ]
 class FitConnectIQView extends WatchUi.View {
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 12; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 13; ]
     <init> {
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 12; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 13; ]
     static
     <init> {
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 14; @position = 15; @symbol_vardef = [mFormatter,14,15,25]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 15; @position = 15; @symbol_vardef = [mFormatter,15,15,25]; ]
     protected
     var mFormatter;
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 16; @position = 15; @symbol_vardef = [mStatus,16,15,22]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 17; @position = 15; @symbol_vardef = [mStatus,17,15,22]; ]
     protected
     var mStatus = "Ready";
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 17; @position = 15; @symbol_vardef = [mLastAction,17,15,26]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 18; @position = 15; @symbol_vardef = [mLastAction,18,15,26]; ]
     protected
     var mLastAction = "--";
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 18; @position = 15; @symbol_vardef = [mLastResult,18,15,26]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 19; @position = 15; @symbol_vardef = [mLastResult,19,15,26]; ]
     protected
     var mLastResult = "--";
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 19; @position = 15; @symbol_vardef = [mLastTimer,19,15,25]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 20; @position = 15; @symbol_vardef = [mLastTimer,20,15,25]; ]
     protected
     var mLastTimer = "--";
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 20; @position = 15; @symbol_vardef = [mTransmitInProgress,20,15,34]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 21; @position = 15; @symbol_vardef = [mTransmitInProgress,21,15,34]; ]
     protected
     var mTransmitInProgress = false;
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 22; @symbol_functiondef = [initialize,22,13,23]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 22; @position = 15; @symbol_vardef = [mTransportBlocked,22,15,32]; ]
+    protected
+    var mTransportBlocked = false;
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 23; @position = 15; @symbol_vardef = [mTransmitTimer,23,15,29]; ]
+    protected
+    var mTransmitTimer;
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 25; @symbol_functiondef = [initialize,25,13,23]; ]
     function initialize() as Void {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_22_26_25_4_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 23 8 ]
-        symbol [ View %tmp.2 23 8 12 ];
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_25_26_29_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 26 8 ]
+        symbol [ View %tmp.2 26 8 12 ];
         %tmp.2 = getv ? :View;
-        symbol [ initialize %tmp.3 23 13 23 ];
+        symbol [ initialize %tmp.3 26 13 23 ];
         %tmp.3 = getv function %tmp.2 :initialize;
         invoke %tmp.2 %tmp.3();
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 24 8 ]
-        symbol [ FitConnectDataFormatter %tmp.7 24 25 48 ];
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 27 8 ]
+        symbol [ FitConnectDataFormatter %tmp.7 27 25 48 ];
         %tmp.7 = getv ? :FitConnectDataFormatter;
         %tmp.4 = newc %tmp.7 ();
-        symbol [ mFormatter ? 24 8 18 ];
+        symbol [ mFormatter ? 27 8 18 ];
         putv self :mFormatter %tmp.4;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_22_26_25_4_stop:
-    }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 27; @symbol_functiondef = [collectData,27,13,24]; ]
-    function collectData() {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_27_27_53_4_start:
 [ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 28 8 ]
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_28_8_31_8_if_stmt:
-        symbol [ mTransmitInProgress %tmp.2 28 12 31 ];
-        %tmp.2 = getv ? :mTransmitInProgress;
-        bf %tmp.2 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_28_8_31_8_if_end;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_28_8_31_8_if_true:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_28_33_31_8_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 29 12 ]
-        %tmp.3 = self;
-        symbol [ setWatchStatus %tmp.4 29 12 26 ];
-        %tmp.4 = getv function %tmp.3 :setWatchStatus;
-        %tmp.5 = "Busy";
-        %tmp.6 = "Transmit";
-        %tmp.7 = "Already in progress";
-        invoke %tmp.3 %tmp.4(%tmp.5, %tmp.6, %tmp.7);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 30 12 ]
-        ret ?;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_28_33_31_8_stop:
-        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_28_8_31_8_if_end;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_28_8_31_8_if_end:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 33 8 ]
-        %tmp.8 = self;
-        symbol [ setWatchStatus %tmp.9 33 8 22 ];
-        %tmp.9 = getv function %tmp.8 :setWatchStatus;
-        %tmp.10 = "Collecting";
-        %tmp.11 = "Payload";
-        %tmp.12 = "Reading sensors";
-        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.11, %tmp.12);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 35 8 ]
-        [ "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_27_27_53_4_start" "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_27_27_53_4_stop" ]
-        %mockPayload.1 = local;
-        symbol [ mockPayload %mockPayload.1 35 12 23 ];
-        %tmp.13 = newd 2;
-        %tmp.14 = "KEY_MESSAGE_TYPE";
-        %tmp.15 = "ping";
-        %tmp.16 = dup %tmp.13;
-        %tmp.17 = aputv %tmp.16 %tmp.14 %tmp.15;
-        %tmp.18 = "KEY_MESSAGE_PAYLOAD";
-        %tmp.19 = newd 1;
-        %tmp.20 = "timer";
-        symbol [ System %tmp.21 38 26 32 ];
-        %tmp.21 = getm $.Toybox.System;
-        symbol [ getTimer %tmp.22 38 33 41 ];
-        %tmp.22 = getv function %tmp.21 :getTimer;
-        %tmp.23 = invoke %tmp.21 %tmp.22();
-        %tmp.24 = dup %tmp.19;
-        %tmp.25 = aputv %tmp.24 %tmp.20 %tmp.23;
-        %tmp.26 = dup %tmp.17;
-        %tmp.27 = aputv %tmp.26 %tmp.18 %tmp.25;
-        lputv %mockPayload.1 %tmp.27;
-        symbol [ mockPayload %mockPayload.1 35 12 23 ];
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 42 8 ]
-        %tmp.28 = self;
-        symbol [ setWatchStatus %tmp.29 42 8 22 ];
-        %tmp.29 = getv function %tmp.28 :setWatchStatus;
-        %tmp.30 = "Sending";
-        %tmp.31 = "Payload";
-        %tmp.32 = "Ping created";
-        invoke %tmp.28 %tmp.29(%tmp.30, %tmp.31, %tmp.32);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 44 8 ]
-        %tmp.33 = true;
-        symbol [ mTransmitInProgress ? 44 8 27 ];
-        putv self :mTransmitInProgress %tmp.33;
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 46 8 ]
-        symbol [ Communications %tmp.34 46 8 22 ];
-        %tmp.34 = getm $.Toybox.Communications;
-        symbol [ transmit %tmp.35 46 23 31 ];
-        %tmp.35 = getv function %tmp.34 :transmit;
-        %tmp.36 = lgetv %mockPayload.1;
-        symbol [ mockPayload %tmp.36 47 12 23 ];
-        %tmp.37 = null;
-        symbol [ FitConnectTransmitCallback %tmp.41 49 16 42 ];
-        %tmp.41 = getv ? :FitConnectTransmitCallback;
-        %tmp.42 = self;
-        symbol [ self %tmp.42 49 43 47 ];
-        %tmp.38 = newc %tmp.41 (%tmp.42);
-        invoke %tmp.34 %tmp.35(%tmp.36, %tmp.37, %tmp.38);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 52 8 ]
-        %tmp.43 = self;
-        symbol [ setWatchStatus %tmp.44 52 8 22 ];
-        %tmp.44 = getv function %tmp.43 :setWatchStatus;
-        %tmp.45 = "Waiting";
-        %tmp.46 = "Transmit";
-        %tmp.47 = "Queued";
-        invoke %tmp.43 %tmp.44(%tmp.45, %tmp.46, %tmp.47);
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_27_27_53_4_stop:
+        symbol [ Timer %tmp.10 28 29 34 ];
+        %tmp.10 = getm $.Toybox.Timer;
+        symbol [ Timer %tmp.11 28 35 40 ];
+        %tmp.11 = getv function ? %tmp.10 :Timer;
+        %tmp.8 = newc %tmp.11 ();
+        symbol [ mTransmitTimer ? 28 8 22 ];
+        putv self :mTransmitTimer %tmp.8;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_25_26_29_4_stop:
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 55; @symbol_functiondef = [setWatchStatus,55,13,27]; @symbol_param<0> = [status,55,28,34]; @symbol_param<1> = [action,55,36,42]; @symbol_param<2> = [result,55,44,50]; ]
-    function setWatchStatus(status, action, result) {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_55_52_63_4_start:
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 31; @symbol_functiondef = [collectData,31,13,24]; ]
+    function collectData() {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_31_27_59_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 32 8 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_32_8_35_8_if_stmt:
+        symbol [ mTransportBlocked %tmp.2 32 12 29 ];
+        %tmp.2 = getv ? :mTransportBlocked;
+        bf %tmp.2 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_32_8_35_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_32_8_35_8_if_true:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_32_31_35_8_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 33 12 ]
+        %tmp.3 = self;
+        symbol [ setWatchStatus %tmp.4 33 12 26 ];
+        %tmp.4 = getv function %tmp.3 :setWatchStatus;
+        %tmp.5 = "Blocked";
+        %tmp.6 = "Transmit";
+        %tmp.7 = "Restart app to retry";
+        invoke %tmp.3 %tmp.4(%tmp.5, %tmp.6, %tmp.7);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 34 12 ]
+        ret ?;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_32_31_35_8_stop:
+        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_32_8_35_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_32_8_35_8_if_end:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 37 8 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_37_8_40_8_if_stmt:
+        symbol [ mTransmitInProgress %tmp.9 37 12 31 ];
+        %tmp.9 = getv ? :mTransmitInProgress;
+        bf %tmp.9 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_37_8_40_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_37_8_40_8_if_true:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_37_33_40_8_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 38 12 ]
+        %tmp.10 = self;
+        symbol [ setWatchStatus %tmp.11 38 12 26 ];
+        %tmp.11 = getv function %tmp.10 :setWatchStatus;
+        %tmp.12 = "Busy";
+        %tmp.13 = "Transmit";
+        %tmp.14 = "Already in progress";
+        invoke %tmp.10 %tmp.11(%tmp.12, %tmp.13, %tmp.14);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 39 12 ]
+        ret ?;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_37_33_40_8_stop:
+        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_37_8_40_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_37_8_40_8_if_end:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 42 8 ]
+        %tmp.15 = self;
+        symbol [ setWatchStatus %tmp.16 42 8 22 ];
+        %tmp.16 = getv function %tmp.15 :setWatchStatus;
+        %tmp.17 = "Collecting";
+        %tmp.18 = "Payload";
+        %tmp.19 = "Reading sensors";
+        invoke %tmp.15 %tmp.16(%tmp.17, %tmp.18, %tmp.19);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 44 8 ]
+        [ "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_31_27_59_4_start" "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_31_27_59_4_stop" ]
+        %mockPayload.1 = local;
+        symbol [ mockPayload %mockPayload.1 44 12 23 ];
+        %tmp.20 = "ping from watch";
+        lputv %mockPayload.1 %tmp.20;
+        symbol [ mockPayload %mockPayload.1 44 12 23 ];
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 46 8 ]
+        %tmp.21 = self;
+        symbol [ setWatchStatus %tmp.22 46 8 22 ];
+        %tmp.22 = getv function %tmp.21 :setWatchStatus;
+        %tmp.23 = "Sending";
+        %tmp.24 = "Payload";
+        %tmp.25 = lgetv %mockPayload.1;
+        symbol [ mockPayload %tmp.25 46 45 56 ];
+        invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.25);
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 48 8 ]
+        %tmp.26 = true;
+        symbol [ mTransmitInProgress ? 48 8 27 ];
+        putv self :mTransmitInProgress %tmp.26;
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 50 8 ]
+        symbol [ Communications %tmp.27 50 8 22 ];
+        %tmp.27 = getm $.Toybox.Communications;
+        symbol [ transmit %tmp.28 50 23 31 ];
+        %tmp.28 = getv function %tmp.27 :transmit;
+        %tmp.29 = lgetv %mockPayload.1;
+        symbol [ mockPayload %tmp.29 51 12 23 ];
+        %tmp.30 = newd 0;
+        symbol [ FitConnectTransmitCallback %tmp.34 53 16 42 ];
+        %tmp.34 = getv ? :FitConnectTransmitCallback;
+        %tmp.35 = self;
+        symbol [ self %tmp.35 53 43 47 ];
+        %tmp.31 = newc %tmp.34 (%tmp.35);
+        invoke %tmp.27 %tmp.28(%tmp.29, %tmp.30, %tmp.31);
 [ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 56 8 ]
-        %tmp.1 = lgetv %status;
-        symbol [ status %tmp.1 56 18 24 ];
-        symbol [ mStatus ? 56 8 15 ];
-        putv self :mStatus %tmp.1;
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 57 8 ]
-        %tmp.2 = lgetv %action;
-        symbol [ action %tmp.2 57 22 28 ];
-        symbol [ mLastAction ? 57 8 19 ];
-        putv self :mLastAction %tmp.2;
+        symbol [ mTransmitTimer %tmp.37 56 8 22 ];
+        %tmp.37 = getv ? :mTransmitTimer;
+        symbol [ start %tmp.38 56 23 28 ];
+        %tmp.38 = getv function %tmp.37 :start;
+        %tmp.39 = self;
+        symbol [ method %tmp.40 56 29 35 ];
+        %tmp.40 = getv function %tmp.39 :method;
+        %tmp.42 = const :onTransmitTimeout;
+        symbol [ onTransmitTimeout %tmp.42 56 37 54 const ];
+        %tmp.43 = invoke %tmp.39 %tmp.40(%tmp.42);
+        %tmp.44 = 6000;
+        %tmp.45 = false;
+        invoke %tmp.37 %tmp.38(%tmp.43, %tmp.44, %tmp.45);
 [ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 58 8 ]
+        %tmp.46 = self;
+        symbol [ setWatchStatus %tmp.47 58 8 22 ];
+        %tmp.47 = getv function %tmp.46 :setWatchStatus;
+        %tmp.48 = "Waiting";
+        %tmp.49 = "Transmit";
+        %tmp.50 = "Queued";
+        invoke %tmp.46 %tmp.47(%tmp.48, %tmp.49, %tmp.50);
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_31_27_59_4_stop:
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 61; @symbol_functiondef = [onTransmitTimeout,61,13,30]; ]
+    function onTransmitTimeout() as Void {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_61_41_69_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 62 8 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_62_8_64_8_if_stmt:
+        symbol [ mTransmitInProgress %tmp.2 62 13 32 ];
+        %tmp.2 = getv ? :mTransmitInProgress;
+        %tmp.3 = not %tmp.2;
+        bf %tmp.3 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_62_8_64_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_62_8_64_8_if_true:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_62_34_64_8_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 63 12 ]
+        ret ?;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_62_34_64_8_stop:
+        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_62_8_64_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_62_8_64_8_if_end:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 66 8 ]
+        %tmp.4 = false;
+        symbol [ mTransmitInProgress ? 66 8 27 ];
+        putv self :mTransmitInProgress %tmp.4;
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 67 8 ]
+        %tmp.5 = true;
+        symbol [ mTransportBlocked ? 67 8 25 ];
+        putv self :mTransportBlocked %tmp.5;
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 68 8 ]
+        %tmp.6 = self;
+        symbol [ setWatchStatus %tmp.7 68 8 22 ];
+        %tmp.7 = getv function %tmp.6 :setWatchStatus;
+        %tmp.8 = "Timeout";
+        %tmp.9 = "Transmit";
+        %tmp.10 = "Blocked after 6s";
+        invoke %tmp.6 %tmp.7(%tmp.8, %tmp.9, %tmp.10);
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_61_41_69_4_stop:
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 71; @symbol_functiondef = [setWatchStatus,71,13,27]; @symbol_param<0> = [status,71,28,34]; @symbol_param<1> = [action,71,36,42]; @symbol_param<2> = [result,71,44,50]; ]
+    function setWatchStatus(status, action, result) {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_71_52_79_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 72 8 ]
+        %tmp.1 = lgetv %status;
+        symbol [ status %tmp.1 72 18 24 ];
+        symbol [ mStatus ? 72 8 15 ];
+        putv self :mStatus %tmp.1;
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 73 8 ]
+        %tmp.2 = lgetv %action;
+        symbol [ action %tmp.2 73 22 28 ];
+        symbol [ mLastAction ? 73 8 19 ];
+        putv self :mLastAction %tmp.2;
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 74 8 ]
         %tmp.3 = lgetv %result;
-        symbol [ result %tmp.3 58 22 28 ];
-        symbol [ mLastResult ? 58 8 19 ];
+        symbol [ result %tmp.3 74 22 28 ];
+        symbol [ mLastResult ? 74 8 19 ];
         putv self :mLastResult %tmp.3;
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 59 8 ]
-        symbol [ System %tmp.4 59 21 27 ];
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 75 8 ]
+        symbol [ System %tmp.4 75 21 27 ];
         %tmp.4 = getm $.Toybox.System;
-        symbol [ getTimer %tmp.5 59 28 36 ];
+        symbol [ getTimer %tmp.5 75 28 36 ];
         %tmp.5 = getv function %tmp.4 :getTimer;
         %tmp.6 = invoke %tmp.4 %tmp.5();
-        symbol [ toString %tmp.7 59 39 47 ];
+        symbol [ toString %tmp.7 75 39 47 ];
         %tmp.7 = getv function %tmp.6 :toString;
         %tmp.8 = invoke %tmp.6 %tmp.7();
-        symbol [ mLastTimer ? 59 8 18 ];
+        symbol [ mLastTimer ? 75 8 18 ];
         putv self :mLastTimer %tmp.8;
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 61 8 ]
-        symbol [ System %tmp.9 61 8 14 ];
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 77 8 ]
+        symbol [ System %tmp.9 77 8 14 ];
         %tmp.9 = getm $.Toybox.System;
-        symbol [ println %tmp.10 61 15 22 ];
+        symbol [ println %tmp.10 77 15 22 ];
         %tmp.10 = getv function %tmp.9 :println;
         %tmp.11 = lgetv %status;
-        symbol [ status %tmp.11 61 23 29 ];
+        symbol [ status %tmp.11 77 23 29 ];
         %tmp.12 = " | ";
         %tmp.13 = add %tmp.11 %tmp.12;
         %tmp.14 = lgetv %action;
-        symbol [ action %tmp.14 61 40 46 ];
+        symbol [ action %tmp.14 77 40 46 ];
         %tmp.15 = add %tmp.13 %tmp.14;
         %tmp.16 = " | ";
         %tmp.17 = add %tmp.15 %tmp.16;
         %tmp.18 = lgetv %result;
-        symbol [ result %tmp.18 61 57 63 ];
+        symbol [ result %tmp.18 77 57 63 ];
         %tmp.19 = add %tmp.17 %tmp.18;
         invoke %tmp.9 %tmp.10(%tmp.19);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 62 8 ]
-        symbol [ WatchUi %tmp.20 62 8 15 ];
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 78 8 ]
+        symbol [ WatchUi %tmp.20 78 8 15 ];
         %tmp.20 = getm $.Toybox.WatchUi;
-        symbol [ requestUpdate %tmp.21 62 16 29 ];
+        symbol [ requestUpdate %tmp.21 78 16 29 ];
         %tmp.21 = getv function %tmp.20 :requestUpdate;
         invoke %tmp.20 %tmp.21();
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_55_52_63_4_stop:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_71_52_79_4_stop:
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 65; @symbol_functiondef = [onTransmitFinished,65,13,31]; @symbol_param<0> = [success,65,32,39]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 81; @symbol_functiondef = [onTransmitFinished,81,13,31]; @symbol_param<0> = [success,81,32,39]; ]
     function onTransmitFinished(success) {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_65_41_73_4_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 66 8 ]
-        %tmp.1 = false;
-        symbol [ mTransmitInProgress ? 66 8 27 ];
-        putv self :mTransmitInProgress %tmp.1;
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 68 8 ]
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_68_8_72_8_if_stmt:
-        %tmp.2 = lgetv %success;
-        symbol [ success %tmp.2 68 12 19 ];
-        bf %tmp.2 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_68_8_72_8_if_else_false;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_68_8_72_8_if_true:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_68_21_70_8_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 69 12 ]
-        %tmp.3 = self;
-        symbol [ setWatchStatus %tmp.4 69 12 26 ];
-        %tmp.4 = getv function %tmp.3 :setWatchStatus;
-        %tmp.5 = "Ready";
-        %tmp.6 = "Transmit";
-        %tmp.7 = "Complete";
-        invoke %tmp.3 %tmp.4(%tmp.5, %tmp.6, %tmp.7);
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_68_21_70_8_stop:
-        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_68_8_72_8_if_end;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_68_8_72_8_if_else_false:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_70_15_72_8_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 71 12 ]
-        %tmp.8 = self;
-        symbol [ setWatchStatus %tmp.9 71 12 26 ];
-        %tmp.9 = getv function %tmp.8 :setWatchStatus;
-        %tmp.10 = "Ready";
-        %tmp.11 = "Transmit";
-        %tmp.12 = "Error";
-        invoke %tmp.8 %tmp.9(%tmp.10, %tmp.11, %tmp.12);
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_70_15_72_8_stop:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_68_8_72_8_if_end:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_65_41_73_4_stop:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_81_41_91_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 82 8 ]
+        symbol [ mTransmitTimer %tmp.2 82 8 22 ];
+        %tmp.2 = getv ? :mTransmitTimer;
+        symbol [ stop %tmp.3 82 23 27 ];
+        %tmp.3 = getv function %tmp.2 :stop;
+        invoke %tmp.2 %tmp.3();
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 83 8 ]
+        %tmp.4 = false;
+        symbol [ mTransmitInProgress ? 83 8 27 ];
+        putv self :mTransmitInProgress %tmp.4;
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 84 8 ]
+        %tmp.5 = false;
+        symbol [ mTransportBlocked ? 84 8 25 ];
+        putv self :mTransportBlocked %tmp.5;
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 86 8 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_86_8_90_8_if_stmt:
+        %tmp.6 = lgetv %success;
+        symbol [ success %tmp.6 86 12 19 ];
+        bf %tmp.6 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_86_8_90_8_if_else_false;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_86_8_90_8_if_true:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_86_21_88_8_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 87 12 ]
+        %tmp.7 = self;
+        symbol [ setWatchStatus %tmp.8 87 12 26 ];
+        %tmp.8 = getv function %tmp.7 :setWatchStatus;
+        %tmp.9 = "Ready";
+        %tmp.10 = "Transmit";
+        %tmp.11 = "Complete";
+        invoke %tmp.7 %tmp.8(%tmp.9, %tmp.10, %tmp.11);
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_86_21_88_8_stop:
+        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_86_8_90_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_86_8_90_8_if_else_false:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_88_15_90_8_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 89 12 ]
+        %tmp.12 = self;
+        symbol [ setWatchStatus %tmp.13 89 12 26 ];
+        %tmp.13 = getv function %tmp.12 :setWatchStatus;
+        %tmp.14 = "Ready";
+        %tmp.15 = "Transmit";
+        %tmp.16 = "Error";
+        invoke %tmp.12 %tmp.13(%tmp.14, %tmp.15, %tmp.16);
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_88_15_90_8_stop:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_86_8_90_8_if_end:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_81_41_91_4_stop:
     }
-    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 75; @symbol_functiondef = [onUpdate,75,13,21]; @symbol_param<0> = [dc,75,22,24]; ]
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 93; @symbol_functiondef = [onUpdate,93,13,21]; @symbol_param<0> = [dc,93,22,24]; ]
     function onUpdate(dc) {
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_75_26_96_4_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 76 8 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_93_26_114_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 94 8 ]
         %tmp.1 = lgetv %dc;
-        symbol [ dc %tmp.1 76 8 10 ];
-        symbol [ setColor %tmp.2 76 11 19 ];
+        symbol [ dc %tmp.1 94 8 10 ];
+        symbol [ setColor %tmp.2 94 11 19 ];
         %tmp.2 = getv function %tmp.1 :setColor;
-        symbol [ Graphics %tmp.3 76 20 28 ];
+        symbol [ Graphics %tmp.3 94 20 28 ];
         %tmp.3 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.4 76 29 40 ];
+        symbol [ COLOR_BLACK %tmp.4 94 29 40 ];
         %tmp.4 = getv %tmp.3 :COLOR_BLACK;
-        symbol [ Graphics %tmp.5 76 42 50 ];
+        symbol [ Graphics %tmp.5 94 42 50 ];
         %tmp.5 = getm $.Toybox.Graphics;
-        symbol [ COLOR_BLACK %tmp.6 76 51 62 ];
+        symbol [ COLOR_BLACK %tmp.6 94 51 62 ];
         %tmp.6 = getv %tmp.5 :COLOR_BLACK;
         invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 77 8 ]
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 95 8 ]
         %tmp.7 = lgetv %dc;
-        symbol [ dc %tmp.7 77 8 10 ];
-        symbol [ clear %tmp.8 77 11 16 ];
+        symbol [ dc %tmp.7 95 8 10 ];
+        symbol [ clear %tmp.8 95 11 16 ];
         %tmp.8 = getv function %tmp.7 :clear;
         invoke %tmp.7 %tmp.8();
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 79 8 ]
-        [ "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_75_26_96_4_start" "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_75_26_96_4_stop" ]
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 97 8 ]
+        [ "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_93_26_114_4_start" "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_93_26_114_4_stop" ]
         %w.1 = local;
-        symbol [ w %w.1 79 12 13 ];
+        symbol [ w %w.1 97 12 13 ];
         %tmp.9 = lgetv %dc;
-        symbol [ dc %tmp.9 79 16 18 ];
-        symbol [ getWidth %tmp.10 79 19 27 ];
+        symbol [ dc %tmp.9 97 16 18 ];
+        symbol [ getWidth %tmp.10 97 19 27 ];
         %tmp.10 = getv function %tmp.9 :getWidth;
         %tmp.11 = invoke %tmp.9 %tmp.10();
         lputv %w.1 %tmp.11;
-        symbol [ w %w.1 79 12 13 ];
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 80 8 ]
-        [ "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_75_26_96_4_start" "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_75_26_96_4_stop" ]
+        symbol [ w %w.1 97 12 13 ];
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 98 8 ]
+        [ "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_93_26_114_4_start" "C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_93_26_114_4_stop" ]
         %centerX.2 = local;
-        symbol [ centerX %centerX.2 80 12 19 ];
+        symbol [ centerX %centerX.2 98 12 19 ];
         %tmp.12 = lgetv %w.1;
-        symbol [ w %tmp.12 80 22 23 ];
+        symbol [ w %tmp.12 98 22 23 ];
         %tmp.13 = 2;
         %tmp.14 = div %tmp.12 %tmp.13;
         lputv %centerX.2 %tmp.14;
-        symbol [ centerX %centerX.2 80 12 19 ];
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 82 8 ]
+        symbol [ centerX %centerX.2 98 12 19 ];
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 100 8 ]
         %tmp.15 = lgetv %dc;
-        symbol [ dc %tmp.15 82 8 10 ];
-        symbol [ setColor %tmp.16 82 11 19 ];
+        symbol [ dc %tmp.15 100 8 10 ];
+        symbol [ setColor %tmp.16 100 11 19 ];
         %tmp.16 = getv function %tmp.15 :setColor;
-        symbol [ Graphics %tmp.17 82 20 28 ];
+        symbol [ Graphics %tmp.17 100 20 28 ];
         %tmp.17 = getm $.Toybox.Graphics;
-        symbol [ COLOR_WHITE %tmp.18 82 29 40 ];
+        symbol [ COLOR_WHITE %tmp.18 100 29 40 ];
         %tmp.18 = getv %tmp.17 :COLOR_WHITE;
-        symbol [ Graphics %tmp.19 82 42 50 ];
+        symbol [ Graphics %tmp.19 100 42 50 ];
         %tmp.19 = getm $.Toybox.Graphics;
-        symbol [ COLOR_TRANSPARENT %tmp.20 82 51 68 ];
+        symbol [ COLOR_TRANSPARENT %tmp.20 100 51 68 ];
         %tmp.20 = getv %tmp.19 :COLOR_TRANSPARENT;
         invoke %tmp.15 %tmp.16(%tmp.18, %tmp.20);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 84 8 ]
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 102 8 ]
         %tmp.21 = lgetv %dc;
-        symbol [ dc %tmp.21 84 8 10 ];
-        symbol [ drawText %tmp.22 84 11 19 ];
+        symbol [ dc %tmp.21 102 8 10 ];
+        symbol [ drawText %tmp.22 102 11 19 ];
         %tmp.22 = getv function %tmp.21 :drawText;
         %tmp.23 = lgetv %centerX.2;
-        symbol [ centerX %tmp.23 84 20 27 ];
+        symbol [ centerX %tmp.23 102 20 27 ];
         %tmp.24 = 30;
-        symbol [ Graphics %tmp.25 84 33 41 ];
+        symbol [ Graphics %tmp.25 102 33 41 ];
         %tmp.25 = getm $.Toybox.Graphics;
-        symbol [ FONT_MEDIUM %tmp.26 84 42 53 ];
+        symbol [ FONT_MEDIUM %tmp.26 102 42 53 ];
         %tmp.26 = getv %tmp.25 :FONT_MEDIUM;
         %tmp.27 = "FitConnect";
-        symbol [ Graphics %tmp.28 84 69 77 ];
+        symbol [ Graphics %tmp.28 102 69 77 ];
         %tmp.28 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.29 84 78 97 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.29 102 78 97 ];
         %tmp.29 = getv %tmp.28 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.21 %tmp.22(%tmp.23, %tmp.24, %tmp.26, %tmp.27, %tmp.29);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 86 8 ]
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 104 8 ]
         %tmp.30 = lgetv %dc;
-        symbol [ dc %tmp.30 86 8 10 ];
-        symbol [ drawText %tmp.31 86 11 19 ];
+        symbol [ dc %tmp.30 104 8 10 ];
+        symbol [ drawText %tmp.31 104 11 19 ];
         %tmp.31 = getv function %tmp.30 :drawText;
         %tmp.32 = lgetv %centerX.2;
-        symbol [ centerX %tmp.32 86 20 27 ];
+        symbol [ centerX %tmp.32 104 20 27 ];
         %tmp.33 = 75;
-        symbol [ Graphics %tmp.34 86 33 41 ];
+        symbol [ Graphics %tmp.34 104 33 41 ];
         %tmp.34 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.35 86 42 52 ];
+        symbol [ FONT_SMALL %tmp.35 104 42 52 ];
         %tmp.35 = getv %tmp.34 :FONT_SMALL;
         %tmp.36 = "Status: ";
-        symbol [ mStatus %tmp.38 86 67 74 ];
+        symbol [ mStatus %tmp.38 104 67 74 ];
         %tmp.38 = getv ? :mStatus;
         %tmp.39 = add %tmp.36 %tmp.38;
-        symbol [ Graphics %tmp.40 86 76 84 ];
+        symbol [ Graphics %tmp.40 104 76 84 ];
         %tmp.40 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.41 86 85 104 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.41 104 85 104 ];
         %tmp.41 = getv %tmp.40 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.30 %tmp.31(%tmp.32, %tmp.33, %tmp.35, %tmp.39, %tmp.41);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 87 8 ]
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 105 8 ]
         %tmp.42 = lgetv %dc;
-        symbol [ dc %tmp.42 87 8 10 ];
-        symbol [ drawText %tmp.43 87 11 19 ];
+        symbol [ dc %tmp.42 105 8 10 ];
+        symbol [ drawText %tmp.43 105 11 19 ];
         %tmp.43 = getv function %tmp.42 :drawText;
         %tmp.44 = lgetv %centerX.2;
-        symbol [ centerX %tmp.44 87 20 27 ];
+        symbol [ centerX %tmp.44 105 20 27 ];
         %tmp.45 = 110;
-        symbol [ Graphics %tmp.46 87 34 42 ];
+        symbol [ Graphics %tmp.46 105 34 42 ];
         %tmp.46 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.47 87 43 53 ];
+        symbol [ FONT_SMALL %tmp.47 105 43 53 ];
         %tmp.47 = getv %tmp.46 :FONT_SMALL;
         %tmp.48 = "Action: ";
-        symbol [ mLastAction %tmp.50 87 68 79 ];
+        symbol [ mLastAction %tmp.50 105 68 79 ];
         %tmp.50 = getv ? :mLastAction;
         %tmp.51 = add %tmp.48 %tmp.50;
-        symbol [ Graphics %tmp.52 87 81 89 ];
+        symbol [ Graphics %tmp.52 105 81 89 ];
         %tmp.52 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.53 87 90 109 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.53 105 90 109 ];
         %tmp.53 = getv %tmp.52 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.42 %tmp.43(%tmp.44, %tmp.45, %tmp.47, %tmp.51, %tmp.53);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 88 8 ]
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 106 8 ]
         %tmp.54 = lgetv %dc;
-        symbol [ dc %tmp.54 88 8 10 ];
-        symbol [ drawText %tmp.55 88 11 19 ];
+        symbol [ dc %tmp.54 106 8 10 ];
+        symbol [ drawText %tmp.55 106 11 19 ];
         %tmp.55 = getv function %tmp.54 :drawText;
         %tmp.56 = lgetv %centerX.2;
-        symbol [ centerX %tmp.56 88 20 27 ];
+        symbol [ centerX %tmp.56 106 20 27 ];
         %tmp.57 = 145;
-        symbol [ Graphics %tmp.58 88 34 42 ];
+        symbol [ Graphics %tmp.58 106 34 42 ];
         %tmp.58 = getm $.Toybox.Graphics;
-        symbol [ FONT_SMALL %tmp.59 88 43 53 ];
+        symbol [ FONT_SMALL %tmp.59 106 43 53 ];
         %tmp.59 = getv %tmp.58 :FONT_SMALL;
         %tmp.60 = "Result: ";
-        symbol [ mLastResult %tmp.62 88 68 79 ];
+        symbol [ mLastResult %tmp.62 106 68 79 ];
         %tmp.62 = getv ? :mLastResult;
         %tmp.63 = add %tmp.60 %tmp.62;
-        symbol [ Graphics %tmp.64 88 81 89 ];
+        symbol [ Graphics %tmp.64 106 81 89 ];
         %tmp.64 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.65 88 90 109 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.65 106 90 109 ];
         %tmp.65 = getv %tmp.64 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.54 %tmp.55(%tmp.56, %tmp.57, %tmp.59, %tmp.63, %tmp.65);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 89 8 ]
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 107 8 ]
         %tmp.66 = lgetv %dc;
-        symbol [ dc %tmp.66 89 8 10 ];
-        symbol [ drawText %tmp.67 89 11 19 ];
+        symbol [ dc %tmp.66 107 8 10 ];
+        symbol [ drawText %tmp.67 107 11 19 ];
         %tmp.67 = getv function %tmp.66 :drawText;
         %tmp.68 = lgetv %centerX.2;
-        symbol [ centerX %tmp.68 89 20 27 ];
+        symbol [ centerX %tmp.68 107 20 27 ];
         %tmp.69 = 180;
-        symbol [ Graphics %tmp.70 89 34 42 ];
+        symbol [ Graphics %tmp.70 107 34 42 ];
         %tmp.70 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.71 89 43 53 ];
+        symbol [ FONT_XTINY %tmp.71 107 43 53 ];
         %tmp.71 = getv %tmp.70 :FONT_XTINY;
         %tmp.72 = "Timer: ";
-        symbol [ mLastTimer %tmp.74 89 67 77 ];
+        symbol [ mLastTimer %tmp.74 107 67 77 ];
         %tmp.74 = getv ? :mLastTimer;
         %tmp.75 = add %tmp.72 %tmp.74;
-        symbol [ Graphics %tmp.76 89 79 87 ];
+        symbol [ Graphics %tmp.76 107 79 87 ];
         %tmp.76 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.77 89 88 107 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.77 107 88 107 ];
         %tmp.77 = getv %tmp.76 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.66 %tmp.67(%tmp.68, %tmp.69, %tmp.71, %tmp.75, %tmp.77);
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 91 8 ]
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_91_8_95_8_if_stmt:
-        symbol [ mTransmitInProgress %tmp.79 91 12 31 ];
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 109 8 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_109_8_113_8_if_stmt:
+        symbol [ mTransmitInProgress %tmp.79 109 12 31 ];
         %tmp.79 = getv ? :mTransmitInProgress;
-        bf %tmp.79 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_91_8_95_8_if_else_false;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_91_8_95_8_if_true:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_91_33_93_8_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 92 12 ]
+        bf %tmp.79 @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_109_8_113_8_if_else_false;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_109_8_113_8_if_true:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_109_33_111_8_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 110 12 ]
         %tmp.80 = lgetv %dc;
-        symbol [ dc %tmp.80 92 12 14 ];
-        symbol [ drawText %tmp.81 92 15 23 ];
+        symbol [ dc %tmp.80 110 12 14 ];
+        symbol [ drawText %tmp.81 110 15 23 ];
         %tmp.81 = getv function %tmp.80 :drawText;
         %tmp.82 = lgetv %centerX.2;
-        symbol [ centerX %tmp.82 92 24 31 ];
+        symbol [ centerX %tmp.82 110 24 31 ];
         %tmp.83 = 220;
-        symbol [ Graphics %tmp.84 92 38 46 ];
+        symbol [ Graphics %tmp.84 110 38 46 ];
         %tmp.84 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.85 92 47 57 ];
+        symbol [ FONT_XTINY %tmp.85 110 47 57 ];
         %tmp.85 = getv %tmp.84 :FONT_XTINY;
         %tmp.86 = "Please wait...";
-        symbol [ Graphics %tmp.87 92 77 85 ];
+        symbol [ Graphics %tmp.87 110 77 85 ];
         %tmp.87 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.88 92 86 105 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.88 110 86 105 ];
         %tmp.88 = getv %tmp.87 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.80 %tmp.81(%tmp.82, %tmp.83, %tmp.85, %tmp.86, %tmp.88);
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_91_33_93_8_stop:
-        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_91_8_95_8_if_end;
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_91_8_95_8_if_else_false:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_93_15_95_8_start:
-[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 94 12 ]
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_109_33_111_8_stop:
+        goto @C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_109_8_113_8_if_end;
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_109_8_113_8_if_else_false:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_111_15_113_8_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 112 12 ]
         %tmp.89 = lgetv %dc;
-        symbol [ dc %tmp.89 94 12 14 ];
-        symbol [ drawText %tmp.90 94 15 23 ];
+        symbol [ dc %tmp.89 112 12 14 ];
+        symbol [ drawText %tmp.90 112 15 23 ];
         %tmp.90 = getv function %tmp.89 :drawText;
         %tmp.91 = lgetv %centerX.2;
-        symbol [ centerX %tmp.91 94 24 31 ];
+        symbol [ centerX %tmp.91 112 24 31 ];
         %tmp.92 = 220;
-        symbol [ Graphics %tmp.93 94 38 46 ];
+        symbol [ Graphics %tmp.93 112 38 46 ];
         %tmp.93 = getm $.Toybox.Graphics;
-        symbol [ FONT_XTINY %tmp.94 94 47 57 ];
+        symbol [ FONT_XTINY %tmp.94 112 47 57 ];
         %tmp.94 = getv %tmp.93 :FONT_XTINY;
         %tmp.95 = "Press START to send";
-        symbol [ Graphics %tmp.96 94 82 90 ];
+        symbol [ Graphics %tmp.96 112 82 90 ];
         %tmp.96 = getm $.Toybox.Graphics;
-        symbol [ TEXT_JUSTIFY_CENTER %tmp.97 94 91 110 ];
+        symbol [ TEXT_JUSTIFY_CENTER %tmp.97 112 91 110 ];
         %tmp.97 = getv %tmp.96 :TEXT_JUSTIFY_CENTER;
         invoke %tmp.89 %tmp.90(%tmp.91, %tmp.92, %tmp.94, %tmp.95, %tmp.97);
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_93_15_95_8_stop:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_91_8_95_8_if_end:
-C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_75_26_96_4_stop:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_111_15_113_8_stop:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_109_8_113_8_if_end:
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_93_26_114_4_stop:
+    }
+    [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 116; @symbol_functiondef = [onReceivePhoneMessage,116,13,34]; @symbol_param<0> = [message,116,35,42]; ]
+    function onReceivePhoneMessage(message) {
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_116_44_118_4_start:
+[ "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc" 117 8 ]
+        %tmp.1 = self;
+        symbol [ setWatchStatus %tmp.2 117 8 22 ];
+        %tmp.2 = getv function %tmp.1 :setWatchStatus;
+        %tmp.3 = "Received";
+        %tmp.4 = "Android -> Watch";
+        %tmp.5 = lgetv %message;
+        symbol [ message %tmp.5 117 55 62 ];
+        symbol [ toString %tmp.6 117 63 71 ];
+        %tmp.6 = getv function %tmp.5 :toString;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        invoke %tmp.1 %tmp.2(%tmp.3, %tmp.4, %tmp.7);
+C__Users_samue_Documents_Work_FitConnect_FitConnectIQ_source_FitConnectIQView_mc_116_44_118_4_stop:
     }
 }
 [ @file = "C:\Users\samue\Documents\Work\FitConnect\FitConnectIQ\source\FitConnectIQView.mc"; @line = 1; ]

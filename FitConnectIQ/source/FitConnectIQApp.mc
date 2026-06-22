@@ -1,8 +1,12 @@
 import Toybox.Application;
 import Toybox.Lang;
 import Toybox.WatchUi;
+import Toybox.Communications;
+import Toybox.System;
 
 class FitConnectIQApp extends Application.AppBase {
+
+    hidden var mView;
 
     function initialize() {
         AppBase.initialize();
@@ -18,8 +22,22 @@ class FitConnectIQApp extends Application.AppBase {
 
     // Return the initial view of your application here
 function getInitialView() {
-    var view = new FitConnectIQView();
-    return [ view, new FitConnectIQDelegate(view) ];
+    mView = new FitConnectIQView();
+
+    Communications.registerForPhoneAppMessages(
+        method(:onPhoneMessage)
+    );
+
+    return [ mView, new FitConnectIQDelegate(mView) ];
+}
+
+function onPhoneMessage(message as Communications.PhoneAppMessage) as Void {
+    System.println("Phone message received:");
+    System.println(message.data);
+
+    if (mView != null) {
+        mView.onReceivePhoneMessage(message.data);
+    }
 }
 }
 
