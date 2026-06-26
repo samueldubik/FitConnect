@@ -7,7 +7,7 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
     private static let watchAppUUIDString = "3051d135-d055-4657-8548-018c798198a5"
 
     // Must exactly match the URL Type configured in the iOS target Info tab.
-    private static let returnURLScheme = "fitconnect-ciq"
+    private static let returnURLScheme = "fitconnect"
 
     private var selectedDevice: IQDevice?
     private var activeApp: IQApp?
@@ -26,19 +26,25 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
         super.init()
     }
 
-    func initialize() {
-        guard let ciq else {
-            status = "ConnectIQ singleton unavailable"
-            return
-        }
+  func initialize() {
+      guard let ciq else {
+          status = "ConnectIQ singleton unavailable"
+          return
+      }
 
-        ciq.initialize(
-            withUrlScheme: Self.returnURLScheme,
-            uiOverrideDelegate: self
-        )
+      status = "Initializing ConnectIQ with scheme: \(Self.returnURLScheme)"
 
-        status = "iOS Garmin SDK initialized"
-    }
+      ciq.initialize(
+          withUrlScheme: Self.returnURLScheme,
+          uiOverrideDelegate: self
+      )
+
+      lastMessage = """
+      URL scheme: \(Self.returnURLScheme)
+      Bundle display name: \(Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") ?? "MISSING")
+      Query schemes: \(Bundle.main.object(forInfoDictionaryKey: "LSApplicationQueriesSchemes") ?? "MISSING")
+      """
+  }
 
     // iOS equivalent of Android's refreshDevicesAndRegister().
     // If no device was selected yet, this opens Garmin Connect's device picker.
@@ -231,10 +237,14 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
         }
     }
 
-    func needsToInstallConnectMobile() {
-        status = "Garmin Connect is required"
-        lastMessage = "Install Garmin Connect, log in, and pair the Fenix 8."
-    }
+  func needsToInstallConnectMobile() {
+      status = "Garmin SDK requested Garmin Connect"
+      lastMessage = """
+      Garmin Connect callback fired.
+      URL scheme: \(Self.returnURLScheme)
+      Query schemes: \(Bundle.main.object(forInfoDictionaryKey: "LSApplicationQueriesSchemes") ?? "MISSING")
+      """
+  }
 
     func shutdown() {
         ciq?.unregister(forAllDeviceEvents: self)

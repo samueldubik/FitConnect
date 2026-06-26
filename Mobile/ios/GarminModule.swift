@@ -81,4 +81,29 @@ final class GarminModule: NSObject {
     ) {
         resolve(GarminManager.shared.lastReceivedAt)
     }
+  
+  @objc(getConnectionSnapshot:rejecter:)
+  func getConnectionSnapshot(
+      _ resolve: @escaping RCTPromiseResolveBlock,
+      rejecter reject: @escaping RCTPromiseRejectBlock
+  ) {
+      resolve([
+          "status": GarminManager.shared.getDebugStatus(),
+          "message": GarminManager.shared.getDebugMessage(),
+          "receivedCount": GarminManager.shared.receivedMessageCount,
+          "lastReceivedAt": GarminManager.shared.lastReceivedAt,
+          "physicalDeviceMode": GarminManager.shared.isPhysicalDeviceMode()
+      ])
+  }
+
+  @objc(refreshConnection:rejecter:)
+  func refreshConnection(
+      _ resolve: @escaping RCTPromiseResolveBlock,
+      rejecter reject: @escaping RCTPromiseRejectBlock
+  ) {
+      DispatchQueue.main.async {
+          GarminManager.shared.refreshDevicesAndRegister()
+          resolve(nil)
+      }
+  }
 }
