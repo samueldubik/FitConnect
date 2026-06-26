@@ -38,10 +38,10 @@ class FitConnectIQView extends WatchUi.View {
 
         // Keep this deliberately small until phone ↔ watch messaging works.
         var payload = {
-            :type => "ping",
-            :source => "watch",
-            :message => "hello from Fenix 8",
-            :timestamp => System.getTimer()
+            "type" => "ping",
+            "source" => "watch",
+            "message" => "hello from Fenix 8",
+            "timestamp" => System.getTimer()
         };
 
         setWatchStatus("Sending", "Sending to iPhone");
