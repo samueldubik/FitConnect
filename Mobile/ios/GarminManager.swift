@@ -5,13 +5,12 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
     static let shared = GarminManager()
 
     private static let watchAppUUIDString = "3051d135-d055-4657-8548-018c798198a5"
-
-    // Must exactly match the URL Type configured in the iOS target Info tab.
     private static let returnURLScheme = "fitconnect"
 
     private var selectedDevice: IQDevice?
     private var activeApp: IQApp?
     private var listenerRegistered = false
+    private var deviceReadyForCommunication = false
 
     private var ciq: ConnectIQ? {
         ConnectIQ.sharedInstance()
@@ -26,28 +25,21 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
         super.init()
     }
 
-  func initialize() {
-      guard let ciq else {
-          status = "ConnectIQ singleton unavailable"
-          return
-      }
+    func initialize() {
+        guard let ciq else {
+            status = "ConnectIQ singleton unavailable"
+            return
+        }
 
-      status = "Initializing ConnectIQ with scheme: \(Self.returnURLScheme)"
+        ciq.initialize(
+            withUrlScheme: Self.returnURLScheme,
+            uiOverrideDelegate: self
+        )
 
-      ciq.initialize(
-          withUrlScheme: Self.returnURLScheme,
-          uiOverrideDelegate: self
-      )
+        status = "ConnectIQ initialized"
+        lastMessage = "URL scheme: \(Self.returnURLScheme)"
+    }
 
-      lastMessage = """
-      URL scheme: \(Self.returnURLScheme)
-      Bundle display name: \(Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") ?? "MISSING")
-      Query schemes: \(Bundle.main.object(forInfoDictionaryKey: "LSApplicationQueriesSchemes") ?? "MISSING")
-      """
-  }
-
-    // iOS equivalent of Android's refreshDevicesAndRegister().
-    // If no device was selected yet, this opens Garmin Connect's device picker.
     func refreshDevicesAndRegister() {
         guard let selectedDevice else {
             requestDeviceSelection()
@@ -56,18 +48,17 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
 
         registerDeviceEvents(for: selectedDevice)
     }
-  
-  func requestDeviceSelection() {
-      guard let ciq else {
-          status = "ConnectIQ singleton unavailable"
-          return
-      }
 
-      status = "Opening Garmin device selection"
-      ciq.showDeviceSelection()
-  }
+    func requestDeviceSelection() {
+        guard let ciq else {
+            status = "ConnectIQ singleton unavailable"
+            return
+        }
 
-    // Call this from AppDelegate when Garmin Connect opens FitConnect via its URL scheme.
+        status = "Opening Garmin device selection"
+        ciq.showDeviceSelection()
+    }
+
     @discardableResult
     func handleOpenURL(_ url: URL) -> Bool {
         guard url.scheme == Self.returnURLScheme else {
@@ -77,23 +68,22 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
         guard
             let ciq,
             let devices = ciq.parseDeviceSelectionResponse(from: url) as? [IQDevice],
-            !devices.isEmpty
+            let device = devices.first
         else {
             status = "No Garmin devices returned"
             lastMessage = "Garmin Connect returned no compatible devices"
             return false
         }
 
-        let device = devices[0]
-        selectedDevice = device
-        activeApp = nil
-        listenerRegistered = false
+        clearConnectionState(status: "Garmin device selected")
 
-        lastMessage =
-            "Selected device:\n" +
-            "Name: \(device.friendlyName ?? "Unknown")\n" +
-            "Model: \(device.modelName ?? "Unknown")\n" +
-            "Devices returned: \(devices.count)"
+        selectedDevice = device
+        lastMessage = """
+        Selected device:
+        Name: \(device.friendlyName ?? "Unknown")
+        Model: \(device.modelName ?? "Unknown")
+        Devices returned: \(devices.count)
+        """
 
         registerDeviceEvents(for: device)
         return true
@@ -105,9 +95,20 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
             return
         }
 
+        ciq.unregister(forDeviceEvents: device, delegate: self)
         ciq.register(forDeviceEvents: device, delegate: self)
 
-        status = "Device events registered: \(device.friendlyName ?? "Unknown")"
+        selectedDevice = device
+
+        let currentStatus = ciq.getDeviceStatus(device)
+
+        status = "Device events registered; checking watch app"
+        lastMessage = """
+        Device: \(device.friendlyName ?? "Unknown")
+        Current device status: \(currentStatus.rawValue)
+        """
+
+        registerAppMessages(for: device)
     }
 
     private func registerAppMessages(for device: IQDevice) {
@@ -129,14 +130,36 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
         )
 
         activeApp = app
+        listenerRegistered = false
 
-        ciq.register(forAppMessages: app, delegate: self)
+        status = "Checking FitConnect app on watch"
 
-        listenerRegistered = true
-        status = "Physical watch listener registered"
-        lastMessage =
-            "Registered app id:\n" +
-            Self.watchAppUUIDString
+        ciq.getAppStatus(app) { [weak self] appStatus in
+            guard let self else { return }
+
+            guard let appStatus else {
+                self.activeApp = nil
+                self.status = "App status lookup returned nil"
+                self.lastMessage = "Could not query FitConnect on selected watch"
+                return
+            }
+
+            self.lastMessage = "App status: \(String(describing: appStatus))"
+
+            guard appStatus.isInstalled else {
+                self.activeApp = nil
+                self.listenerRegistered = false
+                self.status = "FitConnect watch app is not installed"
+                return
+            }
+
+            ciq.unregister(forAppMessages: app, delegate: self)
+            ciq.register(forAppMessages: app, delegate: self)
+
+            self.listenerRegistered = true
+            self.status = "Physical watch listener registered"
+            self.lastMessage = "Registered app UUID:\n\(Self.watchAppUUIDString)"
+        }
     }
 
     func deviceStatusChanged(_ device: IQDevice!, status deviceStatus: IQDeviceStatus) {
@@ -145,37 +168,31 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
             return
         }
 
+        selectedDevice = device
+
         switch deviceStatus {
         case .connected:
-            selectedDevice = device
-            status = "Watch connected — discovering characteristics"
+            status = "Watch connected"
+            lastMessage = "Waiting for characteristics discovery"
 
         case .bluetoothNotReady:
-            clearConnectionState(
-                status: "Bluetooth not ready"
-            )
+            clearConnectionState(status: "Bluetooth not ready")
 
         case .invalidDevice:
-            clearConnectionState(
-                status: "Invalid Garmin device"
-            )
+            clearConnectionState(status: "Invalid Garmin device")
 
         case .notConnected:
-            clearConnectionState(
-                status: "Watch disconnected"
-            )
+            clearConnectionState(status: "Watch disconnected")
 
         case .notFound:
-            clearConnectionState(
-                status: "Garmin watch not found"
-            )
+            clearConnectionState(status: "Garmin watch not found")
 
         @unknown default:
-            status = "Unknown device state: \(deviceStatus.rawValue)"
+            status = "Unknown device status"
+            lastMessage = "Raw status: \(deviceStatus.rawValue)"
         }
     }
 
-    // This is the real communication-ready point on current Garmin iOS SDK.
     func deviceCharacteristicsDiscovered(_ device: IQDevice!) {
         guard let device else {
             status = "Characteristics discovered without device"
@@ -183,6 +200,7 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
         }
 
         selectedDevice = device
+        deviceReadyForCommunication = true
         status = "Watch ready for communication"
 
         registerAppMessages(for: device)
@@ -199,16 +217,26 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
         lastReceivedAt = Int64(Date().timeIntervalSince1970 * 1000)
 
         status = "Message received"
-
-        lastMessage =
-            "App: \(String(describing: app))\n" +
-            "Message:\n" +
-            formatMessage(message)
+        lastMessage = """
+        App: \(String(describing: app))
+        Message:
+        \(formatMessage(message))
+        """
     }
 
     func sendPingToWatch() {
-        guard let ciq, let app = activeApp else {
-            status = "Cannot send: watch/app unavailable"
+        guard let ciq else {
+            status = "Cannot send: ConnectIQ unavailable"
+            return
+        }
+
+        guard let app = activeApp else {
+            status = "Cannot send: app not registered"
+            return
+        }
+
+        guard deviceReadyForCommunication else {
+            status = "Cannot send: watch not ready"
             return
         }
 
@@ -220,9 +248,8 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
         let payload: NSDictionary = [
             "type": "ping",
             "source": "ios",
-            "timestamp": NSNumber(
-                value: Int64(Date().timeIntervalSince1970 * 1000)
-            )
+            "message": "hello from iPhone",
+            "timestamp": NSNumber(value: Int64(Date().timeIntervalSince1970 * 1000))
         ]
 
         status = "Sending iPhone ping"
@@ -232,19 +259,15 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
             to: app,
             progress: nil
         ) { [weak self] result in
-            self?.status = "iPhone send status: \(result)"
-            self?.lastMessage = "iPhone → Watch ping attempted"
+            self?.status = "iPhone send result: \(result)"
+            self?.lastMessage = "iPhone → Watch payload attempted"
         }
     }
 
-  func needsToInstallConnectMobile() {
-      status = "Garmin SDK requested Garmin Connect"
-      lastMessage = """
-      Garmin Connect callback fired.
-      URL scheme: \(Self.returnURLScheme)
-      Query schemes: \(Bundle.main.object(forInfoDictionaryKey: "LSApplicationQueriesSchemes") ?? "MISSING")
-      """
-  }
+    func needsToInstallConnectMobile() {
+        status = "Garmin Connect is required"
+        lastMessage = "Install/open Garmin Connect and pair the Fenix."
+    }
 
     func shutdown() {
         ciq?.unregister(forAllDeviceEvents: self)
@@ -269,6 +292,7 @@ final class GarminManager: NSObject, IQDeviceEventDelegate, IQAppMessageDelegate
         selectedDevice = nil
         activeApp = nil
         listenerRegistered = false
+        deviceReadyForCommunication = false
         status = newStatus
     }
 
