@@ -37,12 +37,33 @@ class FitConnectIQView extends WatchUi.View {
         setWatchStatus("Preparing", "Creating message");
 
         // Keep this deliberately small until phone ↔ watch messaging works.
-        var payload = {
-            "type" => "ping",
-            "source" => "watch",
-            "message" => "hello from Fenix 8",
-            "timestamp" => System.getTimer()
+        var rawData = {
+            :timer => System.getTimer(),
+
+            :clockTime => System.getClockTime(),
+            :deviceSettings => System.getDeviceSettings(),
+            :displayMode => System.getDisplayMode(),
+            :systemStats => System.getSystemStats(),
+
+            :activityInfo => ActivityMonitor.getInfo(),
+            :activityHistory => ActivityMonitor.getHistory(),
+
+            :sensorInfo => Sensor.getInfo(),
+
+            // Keep history intentionally small for first real transfer.
+            :sensorHeartRateHistory => SensorHistory.getHeartRateHistory({}),
+            :sensorStressHistory => null,
+            :sensorBodyBatteryHistory => null,
+            :sensorOxygenHistory => null,
+            :sensorTemperatureHistory => null,
+            :sensorPressureHistory => null,
+            :sensorElevationHistory => null,
+
+            :positionInfo => Position.getInfo(),
+            :userProfile => UserProfile.getProfile()
         };
+
+        var payload = mFormatter.formatData(rawData);
 
         setWatchStatus("Sending", "Sending to iPhone");
 

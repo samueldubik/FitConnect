@@ -1,4 +1,4 @@
-
+MAX_HISTORY_SAMPLES = 3;
 
 class FitConnectDataFormatter {
     function initialize() {
@@ -7,62 +7,62 @@ class FitConnectDataFormatter {
 
 function formatData(data) {
     return {
-        :type => "fitconnect_dump",
-        :timer => data[:timer],
+        "type" => "fitconnect_dump",
+        "timer" => data[:timer],
 
-        :system => formatSystem(
+        "system" => formatSystem(
             data[:clockTime],
             data[:deviceSettings],
             data[:displayMode],
             data[:systemStats]
         ),
 
-        :activity => {
-            :info => formatActivityInfo(data[:activityInfo]),
-            :history => formatActivityHistory(data[:activityHistory])
+        "activity" => {
+            "info" => formatActivityInfo(data[:activityInfo]),
+            "history" => formatActivityHistory(data[:activityHistory])
         },
 
-        :sensor => {
-            :live => formatSensorInfo(data[:sensorInfo]),
-            :history => {
-                :heartRate => formatSensorHistoryIterator(data[:sensorHeartRateHistory], 20),
-                :stress => formatSensorHistoryIterator(data[:sensorStressHistory], 20),
-                :bodyBattery => formatSensorHistoryIterator(data[:sensorBodyBatteryHistory], 20),
-                :oxygen => formatSensorHistoryIterator(data[:sensorOxygenHistory], 20),
-                :temperature => formatSensorHistoryIterator(data[:sensorTemperatureHistory], 20),
-                :pressure => formatSensorHistoryIterator(data[:sensorPressureHistory], 20),
-                :elevation => formatSensorHistoryIterator(data[:sensorElevationHistory], 20)
+        "sensor" => {
+            "live" => formatSensorInfo(data[:sensorInfo]),
+            "history" => {
+                "heartRate" => formatSensorHistoryIterator(data[:sensorHeartRateHistory], MAX_HISTORY_SAMPLES),
+                "stress" => formatSensorHistoryIterator(data[:sensorStressHistory], MAX_HISTORY_SAMPLES),
+                "bodyBattery" => formatSensorHistoryIterator(data[:sensorBodyBatteryHistory], MAX_HISTORY_SAMPLES),
+                "oxygen" => formatSensorHistoryIterator(data[:sensorOxygenHistory], MAX_HISTORY_SAMPLES),
+                "temperature" => formatSensorHistoryIterator(data[:sensorTemperatureHistory], MAX_HISTORY_SAMPLES),
+                "pressure" => formatSensorHistoryIterator(data[:sensorPressureHistory], MAX_HISTORY_SAMPLES),
+                "elevation" => formatSensorHistoryIterator(data[:sensorElevationHistory], MAX_HISTORY_SAMPLES)
             }
         },
 
-        :position => formatPositionInfo(data[:positionInfo]),
-        :userProfile => formatUserProfile(data[:userProfile])
+        "position" => formatPositionInfo(data[:positionInfo]),
+        "userProfile" => formatUserProfile(data[:userProfile])
     };
 }
 
 function formatSystem(clockTime, deviceSettings, displayMode, systemStats) {
     return {
-        :clockTime => clockTime == null ? null : {
-            :hour => clockTime.hour,
-            :min => clockTime.min,
-            :sec => clockTime.sec
+        "clockTime" => clockTime == null ? null : {
+            "hour" => clockTime.hour,
+            "min" => clockTime.min,
+            "sec" => clockTime.sec
         },
 
-        :displayMode => displayMode,
+        "displayMode" => displayMode,
 
-        :deviceSettings => deviceSettings == null ? null : {
-            :phoneConnected => deviceSettings.phoneConnected,
-            :notificationCount => deviceSettings.notificationCount,
-            :alarmCount => deviceSettings.alarmCount,
-            :is24Hour => deviceSettings.is24Hour,
-            :screenWidth => deviceSettings.screenWidth,
-            :screenHeight => deviceSettings.screenHeight
+        "deviceSettings" => deviceSettings == null ? null : {
+            "phoneConnected" => deviceSettings.phoneConnected,
+            "notificationCount" => deviceSettings.notificationCount,
+            "alarmCount" => deviceSettings.alarmCount,
+            "is24Hour" => deviceSettings.is24Hour,
+            "screenWidth" => deviceSettings.screenWidth,
+            "screenHeight" => deviceSettings.screenHeight
         },
 
-        :systemStats => systemStats == null ? null : {
-            :battery => systemStats.battery,
-            :freeMemory => systemStats.freeMemory,
-            :usedMemory => systemStats.usedMemory
+        "systemStats" => systemStats == null ? null : {
+            "battery" => systemStats.battery,
+            "freeMemory" => systemStats.freeMemory,
+            "usedMemory" => systemStats.usedMemory
         }
     };
 }
@@ -73,13 +73,13 @@ function formatActivityInfo(info) {
     }
 
     return {
-        :steps => info.steps,
-        :stepGoal => info.stepGoal,
-        :calories => info.calories,
-        :distance => info.distance,
-        :floorsClimbed => info.floorsClimbed,
-        :floorsClimbedGoal => info.floorsClimbedGoal,
-        :floorsDescended => info.floorsDescended,
+        "steps" => info.steps,
+        "stepGoal" => info.stepGoal,
+        "calories" => info.calories,
+        "distance" => info.distance,
+        "floorsClimbed" => info.floorsClimbed,
+        "floorsClimbedGoal" => info.floorsClimbedGoal,
+        "floorsDescended" => info.floorsDescended,
     };
 }
 
@@ -94,15 +94,15 @@ function formatActivityHistory(history) {
         var item = history[i];
 
         result.add({
-            :steps => item.steps,
-            :stepGoal => item.stepGoal,
-            :calories => item.calories,
-            :distance => item.distance,
-            :floorsClimbed => item.floorsClimbed,
-            :floorsClimbedGoal => item.floorsClimbedGoal,
-            :floorsDescended => item.floorsDescended,
-            :activeMinutes => formatActiveMinutes(item.activeMinutes),
-            :startOfDay => formatMoment(item.startOfDay)
+            "steps" => item.steps,
+            "stepGoal" => item.stepGoal,
+            "calories" => item.calories,
+            "distance" => item.distance,
+            "floorsClimbed" => item.floorsClimbed,
+            "floorsClimbedGoal" => item.floorsClimbedGoal,
+            "floorsDescended" => item.floorsDescended,
+            "activeMinutes" => formatActiveMinutes(item.activeMinutes),
+            "startOfDay" => formatMoment(item.startOfDay)
         });
     }
 
@@ -115,9 +115,9 @@ function formatActiveMinutes(activeMinutes) {
     }
 
     return {
-        :moderate => activeMinutes.moderate,
-        :vigorous => activeMinutes.vigorous,
-        :total => activeMinutes.total
+        "moderate" => activeMinutes.moderate,
+        "vigorous" => activeMinutes.vigorous,
+        "total" => activeMinutes.total
     };
 }
 
@@ -127,13 +127,13 @@ function formatSensorInfo(info) {
     }
 
     return {
-        :heartRate => info.heartRate,
-        :speed => info.speed,
-        :cadence => info.cadence,
-        :temperature => info.temperature,
-        :altitude => info.altitude,
-        :pressure => info.pressure,
-        :heading => info.heading,
+        "heartRate" => info.heartRate,
+        "speed" => info.speed,
+        "cadence" => info.cadence,
+        "temperature" => info.temperature,
+        "altitude" => info.altitude,
+        "pressure" => info.pressure,
+        "heading" => info.heading,
     };
 }
 
@@ -163,8 +163,8 @@ function formatSensorHistorySample(sample) {
     }
 
     return {
-        :data => sample.data,
-        :when => formatMoment(sample.when)
+        "data" => sample.data,
+        "when" => formatMoment(sample.when)
     };
 }
 
@@ -174,12 +174,12 @@ function formatPositionInfo(info) {
     }
 
     return {
-        :position => formatPosition(info.position),
-        :accuracy => info.accuracy,
-        :altitude => info.altitude,
-        :speed => info.speed,
-        :heading => info.heading,
-        :when => formatMoment(info.when)
+        "position" => formatPosition(info.position),
+        "accuracy" => info.accuracy,
+        "altitude" => info.altitude,
+        "speed" => info.speed,
+        "heading" => info.heading,
+        "when" => formatMoment(info.when)
     };
 }
 
@@ -191,8 +191,8 @@ function formatPosition(position) {
     var degrees = position.toDegrees();
 
     return {
-        :lat => degrees[0],
-        :lon => degrees[1]
+        "lat" => degrees[0],
+        "lon" => degrees[1]
     };
 }
 
@@ -202,13 +202,13 @@ function formatUserProfile(profile) {
     }
 
     return {
-        :gender => profile.gender,
-        :height => profile.height,
-        :weight => profile.weight,
-        :birthYear => profile.birthYear,
-        :restingHeartRate => profile.restingHeartRate,
-        :walkingStepLength => profile.walkingStepLength,
-        :runningStepLength => profile.runningStepLength
+        "gender" => profile.gender,
+        "height" => profile.height,
+        "weight" => profile.weight,
+        "birthYear" => profile.birthYear,
+        "restingHeartRate" => profile.restingHeartRate,
+        "walkingStepLength" => profile.walkingStepLength,
+        "runningStepLength" => profile.runningStepLength
     };
 }
 
